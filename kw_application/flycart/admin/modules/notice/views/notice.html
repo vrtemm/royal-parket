@@ -1,0 +1,33 @@
+<div class="menu_tab" ng:controller="noticeController">
+	<div class="tools_block full">
+		<div class="tb_title">
+			<span ng:bind="::locale.noti_title"></span>
+		</div>
+
+		<div class="tb_wrapper">
+			<div class="field select">
+				<div class="field-row">
+					<span class="label field-cell field-left">
+						<span>
+							<i class="tooltip help" kw:tooltips data-text="{{::locale.help_54 | sanitize}}"></i>{{::locale.noti_type}}
+						</span>
+					</span>
+
+					<div class="field-cell field-right">
+						<select ng:model="tools.noti_type" ui-jq="select2" ui-options="{{selectOptions}}" select2-scrollbar ng:change="changeNotyType()">
+							<option value="off" ng:bind="::locale.off_big"></option>
+							<option value="notice" ng:bind="::locale.msg_big"></option>
+							<option value="light" ng:bind="::locale.light_big"></option>
+							<option value="advanced" ng:bind="::locale.adv_big"></option>
+							<option value="cart" ng:bind="::locale.cart_big"></option>
+						</select>
+					</div>
+				</div>
+			</div>
+
+			<div id="notice-type" ui-view></div>
+
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>

@@ -1,0 +1,323 @@
+<div class="field">
+	<div class="field-row">
+		<span class="label field-cell field-left">
+			<span>
+				<i class="tooltip help" kw:tooltips data-text="{{::locale.help_67 | sanitize}}"></i>{{::locale.width_big}}
+			</span>
+		</span>
+
+		<div class="field-cell field-right">
+			<kw:number model="tools.light_min_width" min="0" label="{{::locale.min}}" step="10"></kw:number>
+			<kw:number model="tools.light_max_width" min="0" label="{{::locale.max}}" step="10"></kw:number>
+			<span class="right-label" ng:bind="::locale.px"></span>
+		</div>
+	</div>
+</div>
+
+<div class="field inter">
+	<div class="field-row">
+		<span class="label field-cell field-left">
+			<span>
+				<i class="tooltip help" kw:tooltips data-text="{{::locale.help_68 | sanitize}}"></i>{{::locale.height_big}}
+			</span>
+		</span>
+
+		<div class="field-cell field-right">
+			<kw:number model="tools.light_min_height" min="0" label="{{::locale.min}}" step="10"></kw:number>
+			<kw:number model="tools.light_max_height" min="0" label="{{::locale.max}}" step="10"></kw:number>
+			<span class="right-label" ng:bind="::locale.px"></span>
+		</div>
+	</div>
+</div>
+
+<div class="field_separator"></div>
+
+<div class="field">
+	<div class="field-row">
+		<span class="label field-cell field-left">
+			<span>
+				<i class="tooltip help" kw:tooltips data-text="{{::locale.help_69 | sanitize}}"></i>{{::locale.bg}}
+			</span>
+		</span>
+
+		<div class="field-cell field-right">
+			<kw:color model="tools.light_bg" default-value="rgba(252,252,252,1)"></kw:color>
+		</div>
+	</div>
+</div>
+
+<div class="field">
+	<div class="field-row">
+		<span class="label field-cell field-left">
+			<span>
+				<i class="tooltip help" kw:tooltips data-text="{{::locale.help_70 | sanitize}}"></i>{{::locale.text}}
+			</span>
+		</span>
+
+		<div class="field-cell field-right">
+			<kw:color model="tools.light_text_color" default-value="rgba(76,76,76,1)"></kw:color>
+		</div>
+	</div>
+</div>
+
+<div class="field inter">
+	<div class="field-row">
+		<span class="label field-cell field-left">
+			<span>
+				<i class="tooltip help" kw:tooltips data-text="{{::locale.help_71 | sanitize}}"></i>{{::locale.close_ico}}
+			</span>
+		</span>
+
+		<div class="field-cell field-right">
+			<kw:color top-label="{{::locale.default}}" model="tools.light_cross" default-value="rgba(163,163,163,1)"></kw:color>
+			<span class="slash-separator">/</span>
+			<kw:color top-label="{{::locale.hover}}" model="tools.light_cross_hover" default-value="rgba(186,185,185,1)"></kw:color>
+		</div>
+	</div>
+</div>
+
+<div class="field_separator"></div>
+
+<div class="field shadow numset top-label">
+	<div class="field-row">
+		<span class="label field-cell field-left">
+			<span>
+				<i class="tooltip help" kw:tooltips data-text="{{::locale.help_72 | sanitize}}"></i>{{::locale.shadow_big}}
+			</span>
+		</span>
+
+		<div class="field-cell field-right">
+			<kw:switcher on="{{::locale.text_enabled}}" off="{{::locale.text_disabled}}" model="tools.light_shadow_on" default-value="true"></kw:switcher><br />
+
+			<div class="if-hide" ng:if="tools.light_shadow_on">
+				<kw:color top-label="{{::locale.color}}" model="tools.light_shadowcolor" default-value="rgba(255,255,255,1)"></kw:color>
+				<kw:number model="tools.light_shadowx" label="{{::locale.x}}"></kw:number>
+				<kw:number model="tools.light_shadowy" label="{{::locale.y}}"></kw:number>
+				<kw:number model="tools.light_shadowblur" min="0" label="{{::locale.blur}}"></kw:number>
+				<span class="right-label" ng:bind="::locale.px"></span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="field inter radius numset top-label">
+	<div class="field-row">
+		<span class="label field-cell field-left">
+			<span>
+				<i class="tooltip help" kw:tooltips data-text="{{::locale.help_73 | sanitize}}"></i>{{::locale.radius}}
+			</span>
+		</span>
+
+		<div class="field-cell field-right">
+			<kw:switcher on="{{::locale.text_enabled}}" off="{{::locale.text_disabled}}" model="tools.light_radius" default-value="true"></kw:switcher><br />
+
+			<div class="if-hide" ng:if="tools.light_radius">
+				<kw:number model="tools.light_radiust" min="0" label="{{::locale.top_left}}"></kw:number>
+				<kw:number model="tools.light_radiusr" min="0" label="{{::locale.top_right}}"></kw:number>
+				<kw:number model="tools.light_radiusb" min="0" label="{{::locale.btm_right}}"></kw:number>
+				<kw:number model="tools.light_radiusl" min="0" label="{{::locale.btm_left}}"></kw:number>
+
+				<span class="drop-switcher" outside-click="dropSwitch['light_radiusval'] = false;">
+					<span class="drop-switcher-label" ng:click="dropSwitch['light_radiusval'] = true;">{{ tools.light_radiusval }}</span>
+					<span class="drop-switcher-area if-hide" ng:if="dropSwitch['light_radiusval']">
+						<label ng:class="{ 'active': tools.light_radiusval === 'px' }">
+							<input type="radio" ng:model="tools.light_radiusval" value="px" ng:change="dropSwitch['light_radiusval'] = false;" />{{::locale.px}}
+						</label>
+						<label ng:class="{ 'active': tools.popup_radiusval === '%' }">
+							<input type="radio" ng:model="tools.light_radiusval" value="%" ng:change="dropSwitch['light_radiusval'] = false;" />{{::locale.percent}}
+						</label>
+					</span>
+				</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="field_separator"></div>
+
+<div class="field color-switch">
+	<div class="field-row">
+		<span class="label field-cell field-left">
+			<span>
+				<i class="tooltip help" kw:tooltips data-text="{{::locale.help_74 | sanitize}}"></i>{{::locale.overlay}}
+			</span>
+		</span>
+
+		<div class="field-cell field-right">
+			<kw:switcher on="{{::locale.text_enabled}}" off="{{::locale.text_disabled}}" model="tools.light_bg_on" default-value="true"></kw:switcher>
+			<kw:color model="tools.light_overlay_bg" class="if-hide" default-value="rgba(0,0,0,0.6)" ng:if="tools.light_bg_on"></kw:color>
+		</div>
+	</div>
+</div>
+
+<div class="field inter ci-field top-label">
+	<div class="field-row">
+		<span class="label field-cell field-left">
+			<span>
+				<i class="tooltip help" kw:tooltips data-text="{{::locale.help_75 | sanitize}}"></i>{{::locale.overlay_img}}
+			</span>
+		</span>
+
+		<div class="field-cell field-right">
+			<kw:switcher on="{{::locale.text_enabled}}" off="{{::locale.text_disabled}}" model="tools.light_image_on" default-value="true"></kw:switcher>
+			<kw:custom-image ng:if="tools.light_image_on" class="if-hide"
+         label="{{::locale.overlay_img}}"
+         model="tools.light_overlay_image"
+         button-manager="{{::locale.select}}"
+         button-upload="{{::locale.upload}}"
+         button-save="{{::locale.save_select}}"
+         button-cancel="{{::locale.cancel_sel}}"
+         button-zoom="{{::locale.zoom_sel}}"
+         button-delete="{{::locale.delete_sel}}"
+         button-close="{{::locale.close_sel}}"
+         directory="../kw_application/flycart/images/bg/"
+         repeat="repeat"
+         position="0 0"
+         default-img="{ src: 'burlap.png', width: 96, height: 96 }"
+         module="kw_flycart"
+         token="{{token}}"
+         readonly="true">
+			</kw:custom-image>
+		</div>
+	</div>
+</div>
+
+<div class="field_separator"></div>
+
+<div class="field">
+	<div class="field-row">
+		<span class="label field-cell field-left">
+			<span>
+				<i class="tooltip help" kw:tooltips data-text="{{::locale.help_76 | sanitize}}"></i>{{::locale.prod_name}}
+			</span>
+		</span>
+
+		<div class="field-cell field-right">
+			<kw:color top-label="{{::locale.default}}" model="tools.light_link_color" default-value="rgba(56,176,227,1)"></kw:color>
+			<span class="slash-separator">/</span>
+			<kw:color top-label="{{::locale.hover}}" model="tools.light_link_hover_color" default-value="rgba(56,176,227,1)"></kw:color>
+		</div>
+	</div>
+</div>
+
+<div class="field inter numset top-label radius">
+	<div class="field-row">
+		<span class="label field-cell field-left">
+			<span>
+				<i class="tooltip help" kw:tooltips data-text="{{::locale.help_77 | sanitize}}"></i>{{::locale.image}}
+			</span>
+		</span>
+
+		<div class="field-cell field-right">
+			<kw:switcher on="{{::locale.text_enabled}}" off="{{::locale.text_disabled}}" model="tools.light_image" default-value="true"></kw:switcher><br />
+
+			<div class="if-hide" ng:if="tools.light_image">
+				<kw:number label="{{::locale.width_min}}" model="tools.light_image_width" min="0"></kw:number>
+				<kw:number label="{{::locale.height_min}}" model="tools.light_image_height" min="0"></kw:number>
+				<span class="right-label" ng:bind="::locale.px"></span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="field_separator"></div>
+
+<div class="field buttons-field" outside-click="buttonsTools['continue_light_btn'] = false;">
+	<div class="field-row">
+		<span class="label field-cell field-left">
+			<span>
+				<i class="tooltip help" kw:tooltips data-text="{{::locale.help_79 | sanitize}}"></i> <span ng:bind-html="::locale.btn_cont_title | sanitize"></span>
+			</span>
+		</span>
+
+		<div class="field-cell field-right">
+			<span class="preview-button continue_light_btn" ng:click="buttonAction(tools.continue_light_btn, 'continue_light_btn');"
+			      ng:class="{ 'button-disabled': !tools.continue_light_btn }" ng:bind="tools.light_continue_btn[lang_id] || locale.btn_continue"></span>
+
+			<kw:switcher on="{{::locale.text_enabled}}" off="{{::locale.text_disabled}}" model="tools.continue_light_btn" default-value="true"></kw:switcher>
+
+			<div class="if-hide" ng:if="tools.continue_light_btn">
+				<style>
+					.continue_light_btn {background: {{ tools.continue_light_btn_bg }};color: {{ tools.continue_light_btn_text }};}
+					.continue_light_btn:hover {background: {{ tools.continue_light_btn_bg_hover }};color: {{ tools.continue_light_btn_text_hover }};}
+				</style>
+
+				<div class="buttons-tools button-popover" ng:if="buttonsTools['continue_light_btn']">
+					<div class="button-popover-row">
+						<kw:color model="tools.continue_light_btn_bg" default-value="rgba(167,167,167,1)"></kw:color>
+						<span class="row-label" ng:bind="::locale.btn_bg"></span>
+						<div class="clearfix"></div>
+					</div>
+					<div class="button-popover-row">
+						<kw:color model="tools.continue_light_btn_bg_hover" default-value="rgba(131,131,131,1)"></kw:color>
+						<span class="row-label" ng:bind="::locale.btn_bg_hov"></span>
+						<div class="clearfix"></div>
+					</div>
+					<div class="button-popover-row">
+						<kw:color model="tools.continue_light_btn_text" default-value="rgba(255,255,255,1)"></kw:color>
+						<span class="row-label" ng:bind="::locale.btn_txt"></span>
+						<div class="clearfix"></div>
+					</div>
+					<div class="button-popover-row">
+						<kw:color model="tools.continue_light_btn_text_hover" default-value="rgba(255,255,255,1)"></kw:color>
+						<span class="row-label" ng:bind="::locale.btn_txt_hov"></span>
+						<div class="clearfix"></div>
+					</div>
+					<div class="button-popover-row-button">
+						<button type="button" class="kw-btn preset-button preset-ok" ng:click="buttonsTools['continue_light_btn'] = false;" ng:bind="::locale.btn_ready"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="field buttons-field" outside-click="buttonsTools['viewcart_light_btn'] = false;">
+	<div class="field-row">
+		<span class="label field-cell field-left">
+			<span>
+				<i class="tooltip help" kw:tooltips data-text="{{::locale.help_78 | sanitize}}"></i> <span ng:bind-html="::locale.btn_check_title | sanitize"></span>
+			</span>
+		</span>
+
+		<div class="field-cell field-right">
+			<span class="preview-button viewcart_light_btn" ng:click="buttonAction(tools.viewcart_light_btn, 'viewcart_light_btn');"
+			      ng:class="{ 'button-disabled': !tools.viewcart_light_btn }" ng:bind="tools.light_viewcart_btn[lang_id] || locale.btn_checkout"></span>
+
+			<kw:switcher on="{{::locale.text_enabled}}" off="{{::locale.text_disabled}}" model="tools.viewcart_light_btn" default-value="true"></kw:switcher>
+
+			<div class="if-hide" ng:if="tools.viewcart_light_btn">
+				<style>
+					.viewcart_light_btn {background: {{ tools.viewcart_light_btn_bg }};color: {{ tools.viewcart_light_btn_text }};}
+					.viewcart_light_btn:hover {background: {{ tools.viewcart_light_btn_bg_hover }};color: {{ tools.viewcart_light_btn_text_hover }};}
+				</style>
+
+				<div class="buttons-tools button-popover" ng:if="buttonsTools['viewcart_light_btn']">
+					<div class="button-popover-row">
+						<kw:color model="tools.viewcart_light_btn_bg" default-value="rgba(167,167,167,1)"></kw:color>
+						<span class="row-label" ng:bind="::locale.btn_bg"></span>
+						<div class="clearfix"></div>
+					</div>
+					<div class="button-popover-row">
+						<kw:color model="tools.viewcart_light_btn_bg_hover" default-value="rgba(131,131,131,1)"></kw:color>
+						<span class="row-label" ng:bind="::locale.btn_bg_hov"></span>
+						<div class="clearfix"></div>
+					</div>
+					<div class="button-popover-row">
+						<kw:color model="tools.viewcart_light_btn_text" default-value="rgba(255,255,255,1)"></kw:color>
+						<span class="row-label" ng:bind="::locale.btn_txt"></span>
+						<div class="clearfix"></div>
+					</div>
+					<div class="button-popover-row">
+						<kw:color model="tools.viewcart_light_btn_text_hover" default-value="rgba(255,255,255,1)"></kw:color>
+						<span class="row-label" ng:bind="::locale.btn_txt_hov"></span>
+						<div class="clearfix"></div>
+					</div>
+					<div class="button-popover-row-button">
+						<button type="button" class="kw-btn preset-button preset-ok" ng:click="buttonsTools['viewcart_light_btn'] = false;" ng:bind="::locale.btn_ready"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

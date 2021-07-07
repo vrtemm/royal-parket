@@ -1,0 +1,150 @@
+<div class="tools_block">
+	<div class="tb_title">
+		<span ng:bind="::locale.popups_title"></span>
+	</div>
+
+	<div class="tb_wrapper">
+
+		<div class="field numset">
+			<div class="field-row">
+				<span class="label field-cell field-left">
+					<span>
+						<i class="tooltip help" kw:tooltips data-text="{{::locale.help_6 | sanitize}}"></i>{{::locale.width_big}}
+					</span>
+				</span>
+
+				<div class="field-cell field-right">
+					<kw:number model="tools.min_width" min="0" label="{{::locale.min}}" step="10"></kw:number>
+					<kw:number model="tools.max_width" min="0" label="{{::locale.max}}" step="10"></kw:number>
+					<span class="right-label" ng:bind="::locale.px"></span>
+				</div>
+			</div>
+		</div>
+
+		<div class="field inter numset">
+			<div class="field-row">
+				<span class="label field-cell field-left">
+					<span>
+						<i class="tooltip help" kw:tooltips data-text="{{::locale.help_7 | sanitize}}"></i>{{::locale.height_big}}
+					</span>
+				</span>
+
+				<div class="field-cell field-right">
+					<kw:number model="tools.min_height" min="0" label="{{::locale.min}}" step="10"></kw:number>
+					<kw:number model="tools.max_height" min="0" label="{{::locale.max}}" step="10"></kw:number>
+					<span class="right-label" ng:bind="::locale.px"></span>
+				</div>
+			</div>
+		</div>
+
+		<div class="field_separator"></div>
+
+		<div class="field shadow numset top-label">
+			<div class="field-row">
+				<span class="label field-cell field-left">
+					<span>
+						<i class="tooltip help" kw:tooltips data-text="{{::locale.help_8 | sanitize}}"></i>{{::locale.shadow_big}}
+					</span>
+				</span>
+
+				<div class="field-cell field-right">
+					<kw:switcher on="{{::locale.text_enabled}}" off="{{::locale.text_disabled}}"
+					             model="tools.popup_shadow_on" default-value="true"></kw:switcher><br />
+
+					<div class="if-hide" ng:if="tools.popup_shadow_on">
+						<kw:color top-label="{{::locale.color}}" model="tools.popup_shadowcolor" default-value="rgba(255,255,255,1)"></kw:color>
+						<kw:number model="tools.popup_shadowx" label="{{::locale.x}}"></kw:number>
+						<kw:number model="tools.popup_shadowy" label="{{::locale.y}}"></kw:number>
+						<kw:number model="tools.popup_shadowblur" min="0" label="{{::locale.blur}}"></kw:number>
+						<span class="right-label" ng:bind="::locale.px"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="field inter radius numset top-label">
+			<div class="field-row">
+				<span class="label field-cell field-left">
+					<span>
+						<i class="tooltip help" kw:tooltips data-text="{{::locale.help_9 | sanitize}}"></i>{{::locale.radius}}
+					</span>
+				</span>
+
+				<div class="field-cell field-right">
+					<kw:switcher on="{{::locale.text_enabled}}" off="{{::locale.text_disabled}}"
+					             model="tools.popup_radius" default-value="true"></kw:switcher><br />
+
+					<div class="if-hide" ng:if="tools.popup_radius">
+						<kw:number model="tools.popup_radiust" min="0" label="{{::locale.top_left}}"></kw:number>
+						<kw:number model="tools.popup_radiusr" min="0" label="{{::locale.top_right}}"></kw:number>
+						<kw:number model="tools.popup_radiusb" min="0" label="{{::locale.btm_right}}"></kw:number>
+						<kw:number model="tools.popup_radiusl" min="0" label="{{::locale.btm_left}}"></kw:number>
+
+						<span class="drop-switcher" outside-click="dropSwitch['popup_radiusval'] = false;">
+							<span class="drop-switcher-label" ng:click="dropSwitch['popup_radiusval'] = true;">{{ tools.popup_radiusval }}</span>
+
+							<span class="drop-switcher-area" ng:if="dropSwitch['popup_radiusval']">
+								<label ng:class="{ 'active': tools.popup_radiusval === 'px' }">
+									<input type="radio" ng:model="tools.popup_radiusval" value="px" ng:change="dropSwitch['popup_radiusval'] = false;" />{{::locale.px}}
+								</label>
+								<label ng:class="{ 'active': tools.popup_radiusval === '%' }">
+									<input type="radio" ng:model="tools.popup_radiusval" value="%" ng:change="dropSwitch['popup_radiusval'] = false;" />{{::locale.percent}}
+								</label>
+							</span>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="field_separator"></div>
+
+		<div class="field color-switch">
+			<div class="field-row">
+				<span class="label field-cell field-left">
+					<span>
+						<i class="tooltip help" kw:tooltips data-text="{{::locale.help_10 | sanitize}}"></i>{{::locale.overlay}}
+					</span>
+				</span>
+
+				<div class="field-cell field-right">
+					<kw:switcher on="{{::locale.text_enabled}}" off="{{::locale.text_disabled}}" model="tools.overlay_bg_on" default-value="true"></kw:switcher>
+					<kw:color class="if-hide" model="tools.overlay_bg" default-value="rgba(0,0,0,0.6)" ng:if="tools.overlay_bg_on"></kw:color>
+				</div>
+			</div>
+		</div>
+
+		<div class="field ci-field top-label">
+			<div class="field-row">
+				<span class="label field-cell field-left">
+					<span>
+						<i class="tooltip help" kw:tooltips data-text="{{::locale.help_11 | sanitize}}"></i>{{::locale.overlay_img}}
+					</span>
+				</span>
+
+				<div class="field-cell field-right">
+					<kw:switcher on="{{::locale.text_enabled}}" off="{{::locale.text_disabled}}" model="tools.overlay_image_on" default-value="true"></kw:switcher>
+					<kw:custom-image  ng:if="tools.overlay_image_on" class="if-hide"
+            label="{{::locale.overlay_img}}"
+            model="tools.overlay_image"
+            button-manager="{{::locale.select}}"
+            button-upload="{{::locale.upload}}"
+            button-save="{{::locale.save_select}}"
+            button-cancel="{{::locale.cancel_sel}}"
+            button-zoom="{{::locale.zoom_sel}}"
+            button-delete="{{::locale.delete_sel}}"
+            button-close="{{::locale.close_sel}}"
+            directory="../kw_application/flycart/images/bg/"
+            repeat="repeat"
+            position="0 0"
+            default-img="{ src: 'burlap.png', width: 96, height: 96 }"
+            module="kw_flycart"
+            token="{{token}}"
+            readonly="true">
+					</kw:custom-image>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>

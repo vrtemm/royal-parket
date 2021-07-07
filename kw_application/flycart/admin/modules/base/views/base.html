@@ -1,0 +1,32 @@
+<!-- start: loader -->
+<div class="router-loader">
+	<div loader></div>
+</div>
+<!--/ end: loader -->
+
+<!-- start: message -->
+<div class="message {{status}}">
+	{{message}}
+	<span class="close-message" ng:click="closeMessage();"></span>
+</div>
+<!--/ end: message -->
+
+<!-- start: left menu -->
+<div id="left_menu" ng:include src="'../kw_application/flycart/admin/modules/base/views/left-menu.html'"></div>
+<!--/ end: left menu -->
+
+<!-- start: base -->
+<div class="left_menu_bg"></div>
+<div id="content">
+
+	<!-- start: header -->
+	<div id="head_module" ui-jq="stick_in_parent" ui-options="{'bottoming': false}"
+	     ng:include src="'../kw_application/flycart/admin/modules/base/views/header.html'"></div>
+	<!--/ end: header -->
+
+	<!-- start: content -->
+	<div id="tabs_container" ui-view></div>
+	<!--/ end: content -->
+
+</div>
+<!--/ end: base -->

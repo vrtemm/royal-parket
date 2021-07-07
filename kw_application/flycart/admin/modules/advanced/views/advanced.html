@@ -1,0 +1,213 @@
+<div class="menu_tab" ng:controller="advancedController">
+	<div class="tools_block full">
+		<div class="tb_title">
+			<span ng:bind="::locale.adv_title"></span>
+		</div>
+
+		<div class="tb_wrapper">
+
+			<div class="field">
+				<div class="field-row">
+					<span class="label field-cell field-left">
+						<span>
+							<i class="tooltip help" kw:tooltips data-text="{{::locale.help_118 | sanitize}}"></i>{{::locale.retina}}
+						</span>
+					</span>
+
+					<div class="field-cell field-right">
+						<kw:switcher on="{{::locale.text_enabled}}" off="{{::locale.text_disabled}}" model="tools.retina" default-value="true"></kw:switcher>
+					</div>
+				</div>
+			</div>
+
+			<div class="field text">
+				<div class="field-row">
+					<span class="label field-cell field-left">
+						<span>
+							<i class="tooltip help" kw:tooltips data-text="{{::locale.help_112 | sanitize}}"></i>{{::locale.standart_cart}}
+						</span>
+					</span>
+
+					<div class="field-cell field-right">
+						<input type="text" ng:model="tools.standart_cart" placeholder="{{::locale.class_or_id}}" />
+					</div>
+				</div>
+			</div>
+
+			<div class="field text">
+				<div class="field-row">
+					<span class="label field-cell field-left">
+						<span>
+							<i class="tooltip help" kw:tooltips data-text="{{::locale.help_113 | sanitize}}"></i>{{::locale.add_to_prod}}
+						</span>
+					</span>
+
+					<div class="field-cell field-right">
+						<input type="text" ng:model="tools.button_product" placeholder="{{::locale.class_or_id}}" />
+					</div>
+				</div>
+			</div>
+
+			<div class="field inter text">
+				<div class="field-row">
+					<span class="label field-cell field-left">
+						<span>
+							<i class="tooltip help" kw:tooltips data-text="{{::locale.help_114 | sanitize}}"></i>{{::locale.add_to_other}}
+						</span>
+					</span>
+
+					<div class="field-cell field-right">
+						<input type="text" ng:model="tools.button_others" placeholder="{{::locale.class_or_id}}" />
+					</div>
+				</div>
+			</div>
+
+			<div class="field text">
+				<div class="field-row">
+					<span class="label field-cell field-left">
+						<span>
+							<i class="tooltip help" kw:tooltips data-text="{{::locale.help_115 | sanitize}}"></i>{{::locale.id_other}}
+						</span>
+					</span>
+
+					<div class="field-cell field-right">
+						<input type="text" ng:model="tools.product_id_all" placeholder="{{::locale.place_id_other}}" />
+					</div>
+				</div>
+			</div>
+
+			<div class="field_separator"></div>
+
+			<div class="field inter text top-label">
+				<div class="field-row">
+					<span class="label field-cell field-left">
+						<span>
+								<i class="tooltip help" kw:tooltips data-text="{{::locale.help_126 | sanitize}}"></i>{{::locale.import | sanitize}}
+						</span>
+					</span>
+
+					<div class="field-cell field-right"
+							flow-init="{
+								singleFile: true,
+								target: 'index.php?route=module/kw_flycart/importTools&token=' + token,
+								testChunks: false,
+								fileParameterName: 'import',
+								successStatuses: [200, 201, 202],
+							}"
+							flow-file-added="!!{sql:1}[$file.getExtension()]"
+							flow-file-success="uploadSuccess($file, $message, $chunk)"
+							flow-files-submitted="$flow.upload()">
+
+						<button class="kw-btn" flow-btn ng:bind="::locale.to_import"></button>
+					</div>
+				</div>
+			</div>
+
+			<div class="field inter text top-label">
+				<div class="field-row">
+					<span class="label field-cell field-left">
+						<span>
+							<i class="tooltip help" kw:tooltips data-text="{{::locale.help_127 | sanitize}}"></i>{{::locale.export | sanitize}}
+						</span>
+					</span>
+
+					<div class="field-cell field-right">
+						<div class="multi-checkboxes">
+							<label ng:repeat="preset in presets">
+								<input type="checkbox" checklist-model="backupId.preset_ids" checklist-value="preset.preset_id" />
+								{{::preset.preset_name}}
+							</label>
+						</div>
+						<span class="span-button" ng:click="checkAll()"ng:bind="::locale.check_all"></span>
+						<span class="span-button-separator">/</span>
+						<span class="span-button" ng:click="uncheckAll()"ng:bind="::locale.unchck_all"></span>
+						<div class="clearfix"></div>
+						<button ng:click="exportTools();" class="kw-btn" ng:bind="::locale.save_checked"></button>
+					</div>
+				</div>
+			</div>
+
+			<div class="field inter text">
+				<div class="field-row">
+					<span class="label field-cell field-left">
+						<span>
+							<i class="tooltip help" kw:tooltips data-text="{{::locale.help_116 | sanitize}}"></i>{{::locale.reset_all}}
+						</span>
+					</span>
+
+					<div class="field-cell field-right">
+						<span outside-click="resetAllClose();">
+							<button ng:click="resetAllOpen();" class="kw-btn" ng:bind="::locale.reset"></button>
+							<div class="preset-popover reset-all" ng:if="resetAll === true">
+								<span class="popover-title" ng:bind-html="::locale.reset_pop_title | sanitize"></span>
+								<p ng:bind-html="::locale.reset_pop_desc | sanitize"></p>
+								<button type="button" class="kw-btn preset-button" ng:click="resetAllClose();"
+								        ng:bind="::locale.cancell_preset"></button>
+
+								<button type="button" class="kw-btn preset-button preset-ok" ng:click="resetAllTools();"
+								        ng:bind="::locale.reset"></button>
+							</div>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="field_separator"></div>
+
+			<div class="field codemirror">
+				<div class="codemirror-descriptions" ng:bind-html="::locale.custom_warning | sanitize"></div>
+				<div class="codemirror-tabs">
+					<div class="codemirror-panel">
+						<span class="codemirror-button" ng:click="codeMirrorCustomActive('custom_css');" ng:class="{ 'active': codeMirrorCustomTabs['custom_css'] }">{{::locale.css}}</span>
+						<span class="codemirror-button" ng:click="codeMirrorCustomActive('custom_js');" ng:class="{ 'active': codeMirrorCustomTabs['custom_js'] }">{{::locale.js}}</span>
+						<span class="codemirror-info" ng:click="codeMirrorCustomActive('custom_info');" ng:class="{ 'active': codeMirrorCustomTabs['custom_info'] }"></span>
+						<span class="codemirror-fullscreen" title="{{::locale.fullscreen}}" ng:click="fullCustomsOpen();"></span>
+					</div>
+					<div class="codemirror-block if-hide" ng:if="codeMirrorCustomTabs['custom_css']">
+						<ui-codemirror ui-codemirror-opts="codeMirrorCss" ng:model="tools.custom_css"></ui-codemirror>
+					</div>
+					<div class="codemirror-block if-hide" ng:if="codeMirrorCustomTabs['custom_js']">
+						<ui-codemirror ui-codemirror-opts="codeMirrorJs" ng:model="tools.custom_js"></ui-codemirror>
+					</div>
+					<div class="codemirror-block info if-hide" ng:if="codeMirrorCustomTabs['custom_info']"
+					     ng:bind-html="::locale.custom_info_adv | sanitize"></div>
+				</div>
+			</div>
+
+			<kw:modal width="80%" trigger="fullCustom">
+				<div id="top_module">
+					<div class="head_bg">
+						<div id="save">
+							<kw:switcher on="{{::locale.text_enabled}}" off="{{::locale.text_disabled}}"
+							             model="tools.status_module" default-value="true" show-all></kw:switcher>
+
+							<a ng:click="save()" class="kw-btn top" ng:bind="::locale.button_save"></a>
+							<a href="{{cancel | href}}" class="kw-btn top" ng:bind="::locale.button_cancel"></a>
+							<a ng:click="apply()" class="kw-btn top" ng:bind="::locale.button_apply"></a>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="field codemirror fullscreen">
+					<div class="codemirror-tabs">
+						<div class="codemirror-panel">
+							<span class="codemirror-button" ng:click="codeMirrorCustomActive('custom_css');" ng:class="{ 'active': codeMirrorCustomTabs['custom_css'] }">{{::locale.css}}</span>
+							<span class="codemirror-button" ng:click="codeMirrorCustomActive('custom_js');" ng:class="{ 'active': codeMirrorCustomTabs['custom_js'] }">{{::locale.js}}</span>
+							<span class="codemirror-info" ng:click="codeMirrorCustomActive('custom_info');" ng:class="{ 'active': codeMirrorCustomTabs['custom_info'] }"></span>
+							<span class="codemirror-lowscreen" title="{{::locale.lowscreen}}" ng:click="fullCustomClose();"></span>
+						</div>
+						<div class="codemirror-block if-hide" ng:if="codeMirrorCustomTabs['custom_css']">
+							<ui-codemirror ui-codemirror-opts="codeMirrorCss" ng:model="tools.custom_css"></ui-codemirror>
+						</div>
+						<div class="codemirror-block if-hide" ng:if="codeMirrorCustomTabs['custom_js']">
+							<ui-codemirror ui-codemirror-opts="codeMirrorJs" ng:model="tools.custom_js"></ui-codemirror>
+						</div>
+						<div class="codemirror-block info if-hide" ng:if="codeMirrorCustomTabs['custom_info']"
+						     ng:bind-html="::locale.custom_info_adv | sanitize"></div>
+					</div>
+				</div>
+			</kw:modal>
+
+		</div>
+	</div>
+</div>

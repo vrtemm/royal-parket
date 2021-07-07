@@ -1,0 +1,307 @@
+<div class="field inter numset">
+	<div class="field-row">
+		<span class="label field-cell field-left">
+			<span>
+				<i class="tooltip help" kw:tooltips data-text="{{::locale.help_117 | sanitize}}"></i>{{::locale.page_position}}
+			</span>
+		</span>
+
+		<div class="field-cell field-right">
+			<kw:number model="tools.noti_pos_t" label="{{::locale.top}}"></kw:number>
+			<kw:number model="tools.noti_pos_r" label="{{::locale.right}}"></kw:number>
+			<kw:number model="tools.noti_pos_b" label="{{::locale.bottom}}"></kw:number>
+			<kw:number model="tools.noti_pos_l" label="{{::locale.left}}"></kw:number>
+			<span class="right-label" ng:bind="::locale.px"></span>
+		</div>
+	</div>
+</div>
+
+<div class="field numset">
+	<div class="field-row">
+		<span class="label field-cell field-left">
+			<span>
+				<i class="tooltip help" kw:tooltips data-text="{{::locale.help_55 | sanitize}}"></i>{{::locale.width_big}}
+			</span>
+		</span>
+
+		<div class="field-cell field-right">
+			<kw:number model="tools.noti_width_min" min="0" label="{{::locale.min}}" step="10"></kw:number>
+			<kw:number model="tools.noti_width_max" min="0" label="{{::locale.max}}" step="10"></kw:number>
+			<span class="right-label" ng:bind="::locale.px"></span>
+		</div>
+	</div>
+</div>
+
+<div class="field numset">
+	<div class="field-row">
+		<span class="label field-cell field-left">
+			<span>
+				<i class="tooltip help" kw:tooltips data-text="{{::locale.help_56 | sanitize}}"></i>{{::locale.height_big}}
+			</span>
+		</span>
+
+		<div class="field-cell field-right">
+			<kw:number model="tools.noti_height_min" min="0" label="{{::locale.min}}" step="10"></kw:number>
+			<kw:number model="tools.noti_height_max" min="0" label="{{::locale.max}}" step="10"></kw:number>
+			<span class="right-label" ng:bind="::locale.px"></span>
+		</div>
+	</div>
+</div>
+
+<div class="field inter">
+	<div class="field-row">
+		<span class="label field-cell field-left">
+			<span>
+				<i class="tooltip help" kw:tooltips data-text="{{::locale.help_57 | sanitize}}"></i>{{::locale.noti_timeout}}
+			</span>
+		</span>
+
+		<div class="field-cell field-right">
+			<kw:number model="tools.noti_timeout" min="0"></kw:number>
+			<span class="right-label" ng:bind="::locale.sec"></span>
+		</div>
+	</div>
+</div>
+
+<div class="field_separator"></div>
+
+<div class="field">
+	<div class="field-row">
+		<span class="label field-cell field-left">
+			<span>
+				<i class="tooltip help" kw:tooltips data-text="{{::locale.help_58 | sanitize}}"></i>{{::locale.bg}}
+			</span>
+		</span>
+
+		<div class="field-cell field-right">
+			<kw:color model="tools.noti_bg" default-value="rgba(255,255,255,1)"></kw:color>
+		</div>
+	</div>
+</div>
+
+<div class="field">
+	<div class="field-row">
+		<span class="label field-cell field-left field-cell field-left">
+			<span>
+				<i class="tooltip help" kw:tooltips data-text="{{::locale.help_59 | sanitize}}"></i>{{::locale.text}}
+			</span>
+		</span>
+
+		<div class="field-cell field-right">
+			<kw:color model="tools.noti_text" default-value="rgba(255,255,255,1)"></kw:color>
+		</div>
+	</div>
+</div>
+
+<div class="field inter">
+	<div class="field-row">
+		<span class="label field-cell field-left">
+			<span>
+				<i class="tooltip help" kw:tooltips data-text="{{::locale.help_60 | sanitize}}"></i>{{::locale.close_ico}}
+			</span>
+		</span>
+
+		<div class="field-cell field-right">
+			<kw:color top-label="{{::locale.default}}" model="tools.noti_cross" default-value="rgba(255,255,255,1)"></kw:color>
+			<span class="slash-separator">/</span>
+			<kw:color top-label="{{::locale.hover}}" model="tools.noti_cross_hover" default-value="rgba(255,255,255,1)"></kw:color>
+		</div>
+	</div>
+</div>
+
+<div class="field_separator"></div>
+
+<div class="field shadow numset top-label">
+	<div class="field-row">
+		<span class="label field-cell field-left">
+			<span>
+				<i class="tooltip help" kw:tooltips data-text="{{::locale.help_61 | sanitize}}"></i>{{::locale.shadow_big}}
+			</span>
+		</span>
+
+		<div class="field-cell field-right">
+			<kw:switcher on="{{::locale.text_enabled}}" off="{{::locale.text_disabled}}" model="tools.noti_shadow_on" default-value="true"></kw:switcher><br />
+
+			<div class="if-hide" ng:if="tools.noti_shadow_on">
+				<kw:color top-label="{{::locale.color}}" model="tools.noti_shadowcolor" default-value="rgba(255,255,255,1)"></kw:color>
+				<kw:number model="tools.noti_shadowx" label="{{::locale.x}}"></kw:number>
+				<kw:number model="tools.noti_shadowy" label="{{::locale.y}}"></kw:number>
+				<kw:number model="tools.noti_shadowblur" min="0" label="{{::locale.blur}}"></kw:number>
+				<span class="right-label" ng:bind="::locale.px"></span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="field inter radius numset top-label">
+	<div class="field-row">
+		<span class="label field-cell field-left">
+			<span>
+				<i class="tooltip help" kw:tooltips data-text="{{::locale.help_62 | sanitize}}"></i>{{::locale.radius}}
+			</span>
+		</span>
+
+		<div class="field-cell field-right">
+			<kw:switcher on="{{::locale.text_enabled}}" off="{{::locale.text_disabled}}" model="tools.noti_radius" default-value="true"></kw:switcher><br />
+
+			<div class="if-hide" ng:if="tools.noti_radius">
+				<kw:number model="tools.noti_radiust" min="0" label="{{::locale.top_left}}"></kw:number>
+				<kw:number model="tools.noti_radiusr" min="0" label="{{::locale.top_right}}"></kw:number>
+				<kw:number model="tools.noti_radiusb" min="0" label="{{::locale.btm_right}}"></kw:number>
+				<kw:number model="tools.noti_radiusl" min="0" label="{{::locale.btm_left}}"></kw:number>
+
+				<span class="drop-switcher" outside-click="dropSwitch['noti_radiusval'] = false;">
+					<span class="drop-switcher-label" ng:click="dropSwitch['noti_radiusval'] = true;">{{ tools.noti_radiusval }}</span>
+					<span class="drop-switcher-area if-hide" ng:if="dropSwitch['noti_radiusval']">
+						<label ng:class="{ 'active': tools.noti_radiusval === 'px' }">
+							<input type="radio" ng:model="tools.noti_radiusval" value="px" ng:change="dropSwitch['noti_radiusval'] = false;" />{{::locale.px}}
+						</label>
+						<label ng:class="{ 'active': tools.popup_radiusval === '%' }">
+							<input type="radio" ng:model="tools.noti_radiusval" value="%" ng:change="dropSwitch['noti_radiusval'] = false;" />{{::locale.percent}}
+						</label>
+					</span>
+				</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="field_separator"></div>
+
+<div class="field">
+	<div class="field-row">
+		<span class="label field-cell field-left field-cell field-left">
+			<span>
+				<i class="tooltip help" kw:tooltips data-text="{{::locale.help_63 | sanitize}}"></i>{{::locale.prod_name}}
+			</span>
+		</span>
+
+		<div class="field-cell field-right">
+			<kw:color top-label="{{::locale.default}}" model="tools.noti_link" default-value="rgba(255,255,255,1)"></kw:color>
+			<span class="slash-separator">/</span>
+			<kw:color top-label="{{::locale.hover}}" model="tools.noti_link_hover" default-value="rgba(255,255,255,1)"></kw:color>
+		</div>
+	</div>
+</div>
+
+<div class="field inter numset top-label radius">
+	<div class="field-row">
+		<span class="label field-cell field-left">
+			<span>
+				<i class="tooltip help" kw:tooltips data-text="{{::locale.help_64 | sanitize}}"></i>{{::locale.prod_img}}
+			</span>
+		</span>
+
+		<div class="field-cell field-right">
+			<kw:switcher on="{{::locale.text_enabled}}" off="{{::locale.text_disabled}}" model="tools.noti_image" default-value="true"></kw:switcher></br>
+
+			<div class="if-hide" ng:if="tools.noti_image">
+				<kw:number label="{{::locale.width_min}}" model="tools.noti_image_width" min="0"></kw:number>
+				<kw:number label="{{::locale.height_min}}" model="tools.noti_image_height" min="0"></kw:number>
+				<span class="right-label" ng:bind="::locale.px"></span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="field_separator"></div>
+
+<div class="field buttons-field" outside-click="buttonsTools['continue_noti_btn'] = false;">
+	<div class="field-row">
+		<span class="label field-cell field-left">
+			<span>
+				<i class="tooltip help" kw:tooltips data-text="{{::locale.help_66 | sanitize}}"></i> <span ng:bind-html="::locale.btn_view_title | sanitize"></span>
+			</span>
+		</span>
+
+		<div class="field-cell field-right">
+			<span class="preview-button continue_noti_btn" ng:click="buttonAction(tools.continue_noti_btn, 'continue_noti_btn');"
+			      ng:class="{ 'button-disabled': !tools.continue_noti_btn }" ng:bind="tools.noti_continue_btn[lang_id] || locale.btn_viewcart"></span>
+
+			<kw:switcher on="{{::locale.text_enabled}}" off="{{::locale.text_disabled}}" model="tools.continue_noti_btn" default-value="true"></kw:switcher>
+
+			<div class="if-hide" ng:if="tools.continue_noti_btn">
+				<style>
+					.continue_noti_btn {background: {{ tools.continue_noti_btn_bg }};color: {{ tools.continue_noti_btn_text }};}
+					.continue_noti_btn:hover {background: {{ tools.continue_noti_btn_bg_hover }};color: {{ tools.continue_noti_btn_text_hover }};}
+				</style>
+
+				<div class="buttons-tools button-popover" ng:if="buttonsTools['continue_noti_btn']">
+					<div class="button-popover-row">
+						<kw:color model="tools.continue_noti_btn_bg" default-value="rgba(167,167,167,1)"></kw:color>
+						<span class="row-label" ng:bind="::locale.btn_bg"></span>
+						<div class="clearfix"></div>
+					</div>
+					<div class="button-popover-row">
+						<kw:color model="tools.continue_noti_btn_bg_hover" default-value="rgba(131,131,131,1)"></kw:color>
+						<span class="row-label" ng:bind="::locale.btn_bg_hov"></span>
+						<div class="clearfix"></div>
+					</div>
+					<div class="button-popover-row">
+						<kw:color model="tools.continue_noti_btn_text" default-value="rgba(255,255,255,1)"></kw:color>
+						<span class="row-label" ng:bind="::locale.btn_txt"></span>
+						<div class="clearfix"></div>
+					</div>
+					<div class="button-popover-row">
+						<kw:color model="tools.continue_noti_btn_text_hover" default-value="rgba(255,255,255,1)"></kw:color>
+						<span class="row-label" ng:bind="::locale.btn_txt_hov"></span>
+						<div class="clearfix"></div>
+					</div>
+					<div class="button-popover-row-button">
+						<button type="button" class="kw-btn preset-button preset-ok" ng:click="buttonsTools['continue_noti_btn'] = false;" ng:bind="::locale.btn_ready"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="field buttons-field" outside-click="buttonsTools['viewcart_noti_btn'] = false;">
+	<div class="field-row">
+		<span class="label field-cell field-left">
+			<span>
+				<i class="tooltip help" kw:tooltips data-text="{{::locale.help_65 | sanitize}}"></i> <span ng:bind-html="::locale.btn_check_title | sanitize"></span>
+			</span>
+		</span>
+
+		<div class="field-cell field-right">
+			<span class="preview-button viewcart_noti_btn" ng:click="buttonAction(tools.viewcart_noti_btn, 'viewcart_noti_btn');"
+			      ng:class="{ 'button-disabled': !tools.viewcart_noti_btn }" ng:bind="tools.noti_viewcart_btn[lang_id] || locale.btn_checkout"></span>
+
+			<kw:switcher on="{{::locale.text_enabled}}" off="{{::locale.text_disabled}}" model="tools.viewcart_noti_btn" default-value="true"></kw:switcher>
+
+			<div class="if-hide" ng:if="tools.viewcart_noti_btn">
+				<style>
+					.viewcart_noti_btn {background: {{ tools.viewcart_noti_btn_bg }};color: {{ tools.viewcart_noti_btn_text }};}
+					.viewcart_noti_btn:hover {background: {{ tools.viewcart_noti_btn_bg_hover }};color: {{ tools.viewcart_noti_btn_text_hover }};}
+				</style>
+
+				<div class="buttons-tools button-popover" ng:if="buttonsTools['viewcart_noti_btn']">
+					<div class="button-popover-row">
+						<kw:color model="tools.viewcart_noti_btn_bg" default-value="rgba(167,167,167,1)"></kw:color>
+						<span class="row-label" ng:bind="::locale.btn_bg"></span>
+						<div class="clearfix"></div>
+					</div>
+					<div class="button-popover-row">
+						<kw:color model="tools.viewcart_noti_btn_bg_hover" default-value="rgba(131,131,131,1)"></kw:color>
+						<span class="row-label" ng:bind="::locale.btn_bg_hov"></span>
+						<div class="clearfix"></div>
+					</div>
+					<div class="button-popover-row">
+						<kw:color model="tools.viewcart_noti_btn_text" default-value="rgba(255,255,255,1)"></kw:color>
+						<span class="row-label" ng:bind="::locale.btn_txt"></span>
+						<div class="clearfix"></div>
+					</div>
+					<div class="button-popover-row">
+						<kw:color model="tools.viewcart_noti_btn_text_hover" default-value="rgba(255,255,255,1)"></kw:color>
+						<span class="row-label" ng:bind="::locale.btn_txt_hov"></span>
+						<div class="clearfix"></div>
+					</div>
+					<div class="button-popover-row-button">
+						<button type="button" class="kw-btn preset-button preset-ok" ng:click="buttonsTools['viewcart_noti_btn'] = false;" ng:bind="::locale.btn_ready"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

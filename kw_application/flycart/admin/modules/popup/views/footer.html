@@ -1,0 +1,330 @@
+<div class="tools_block">
+	<div class="tb_title">
+		<span ng:bind="::locale.popups_footer_title"></span>
+	</div>
+	<div class="tb_wrapper">
+
+		<div class="field">
+			<div class="field-row">
+				<span class="label field-cell field-left">
+					<span>
+						<i class="tooltip help" kw:tooltips data-text="{{::locale.help_29 | sanitize}}"></i>{{::locale.bg}}
+					</span>
+				</span>
+
+				<div class="field-cell field-right">
+					<kw:color model="tools.popup_footer_bg" default-value="rgba(245,245,245,1)"></kw:color>
+				</div>
+			</div>
+		</div>
+
+		<div class="field inter color-switch">
+			<div class="field-row">
+				<span class="label field-cell field-left">
+					<span>
+						<i class="tooltip help" kw:tooltips data-text="{{::locale.help_30 | sanitize}}"></i>{{::locale.shadow_big}}
+					</span>
+				</span>
+
+				<div class="field-cell field-right">
+					<kw:switcher on="{{::locale.text_enabled}}" off="{{::locale.text_disabled}}"
+					             model="tools.popup_footer_shadow_on" default-value="true"></kw:switcher>
+
+					<kw:color model="tools.popup_footer_shadow" class="if-hide"
+					          default-value="rgba(167,167,167,0.6)" ng:if="tools.popup_footer_shadow_on"></kw:color>
+				</div>
+			</div>
+		</div>
+
+		<div class="field_separator"></div>
+
+		<div class="field checkbox-list top-label">
+			<div class="field-row">
+				<span class="label field-cell field-left">
+					<span>
+						<i class="tooltip help" kw:tooltips data-text="{{::locale.help_31 | sanitize}}"></i>{{::locale.content}}
+					</span>
+				</span>
+
+				<div class="field-cell field-right">
+					<kw:checkbox label="{{::locale.quant}}" model="tools.popup_footer_items" default-value="true"></kw:checkbox>
+					<kw:checkbox label="{{::locale.quant_names}}" model="tools.popup_footer_names" default-value="false"></kw:checkbox>
+					<kw:checkbox label="{{::locale.weight}}" model="tools.popup_footer_weight" default-value="true"></kw:checkbox>
+					<kw:checkbox label="{{::locale.total_sum}}" model="tools.popup_footer_total" default-value="true"></kw:checkbox>
+				</div>
+			</div>
+		</div>
+
+		<div class="field inter if-hide" ng:if="tools.popup_footer_items || tools.popup_footer_weight || tools.popup_footer_total">
+			<div class="field-row">
+				<span class="label field-cell field-left">
+					<span>
+						<i class="tooltip help" kw:tooltips data-text="{{::locale.help_32 | sanitize}}"></i>{{::locale.text_content}}
+					</span>
+				</span>
+
+				<div class="field-cell field-right">
+					<kw:color model="tools.popup_footer_info" default-value="rgba(75,75,75,1)"></kw:color>
+				</div>
+			</div>
+		</div>
+
+		<div class="field_separator"></div>
+
+		<div class="field buttons-field" outside-click="buttonsTools['continue'] = false;">
+			<div class="field-row">
+				<span class="label field-cell field-left">
+					<span>
+						<i class="tooltip help" kw:tooltips data-text="{{::locale.help_33 | sanitize}}"></i> <span ng:bind-html="::locale.btn_cont_title | sanitize"></span>
+					</span>
+				</span>
+
+				<div class="field-cell field-right">
+					<span class="preview-button continue_btn" ng:click="buttonAction(tools.continue_btn, 'continue');"
+					      ng:class="{ 'button-disabled': !tools.continue_btn }" ng:bind="tools.continue_btn_txt[lang_id] || locale.btn_continue"></span>
+
+					<kw:switcher on="{{::locale.text_enabled}}" off="{{::locale.text_disabled}}" model="tools.continue_btn" default-value="true"></kw:switcher>
+
+					<div class="if-hide" ng:if="tools.continue_btn">
+						<style>
+							.continue_btn {background: {{ tools.continue_btn_bg }};color: {{ tools.continue_btn_text }};}
+							.continue_btn:hover {background: {{ tools.continue_btn_bg_hover }};color: {{ tools.continue_btn_text_hover }};}
+						</style>
+
+						<div class="buttons-tools button-popover" ng:if="buttonsTools['continue']">
+							<div class="button-popover-row">
+								<kw:color model="tools.continue_btn_bg" default-value="rgba(167,167,167,1)"></kw:color>
+								<span class="row-label" ng:bind="::locale.btn_bg"></span>
+								<div class="clearfix"></div>
+							</div>
+							<div class="button-popover-row">
+								<kw:color model="tools.continue_btn_bg_hover" default-value="rgba(131,131,131,1)"></kw:color>
+								<span class="row-label" ng:bind="::locale.btn_bg_hov"></span>
+								<div class="clearfix"></div>
+							</div>
+							<div class="button-popover-row">
+								<kw:color model="tools.continue_btn_text" default-value="rgba(255,255,255,1)"></kw:color>
+								<span class="row-label" ng:bind="::locale.btn_txt"></span>
+								<div class="clearfix"></div>
+							</div>
+							<div class="button-popover-row">
+								<kw:color model="tools.continue_btn_text_hover" default-value="rgba(255,255,255,1)"></kw:color>
+								<span class="row-label" ng:bind="::locale.btn_txt_hov"></span>
+								<div class="clearfix"></div>
+							</div>
+							<div class="button-popover-row-button">
+								<button type="button" class="kw-btn preset-button preset-ok" ng:click="buttonsTools['continue'] = false;" ng:bind="::locale.btn_ready"></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="field buttons-field" outside-click="buttonsTools['viewcart'] = false;">
+			<div class="field-row">
+				<span class="label field-cell field-left">
+					<span>
+						<i class="tooltip help" kw:tooltips data-text="{{::locale.help_34 | sanitize}}"></i> <span ng:bind-html="::locale.btn_view_title | sanitize"></span>
+					</span>
+				</span>
+
+				<div class="field-cell field-right">
+					<span class="preview-button viewcart_btn" ng:click="buttonAction(tools.viewcart_btn, 'viewcart');"
+					      ng:class="{ 'button-disabled': !tools.viewcart_btn }" ng:bind="tools.viewcart_btn_txt[lang_id] || locale.btn_viewcart"></span>
+
+					<kw:switcher on="{{::locale.text_enabled}}" off="{{::locale.text_disabled}}" model="tools.viewcart_btn" default-value="true"></kw:switcher>
+
+					<div class="if-hide" ng:if="tools.viewcart_btn">
+						<style>
+							.viewcart_btn {background: {{ tools.viewcart_btn_bg }};color: {{ tools.viewcart_btn_text }};}
+							.viewcart_btn:hover {background: {{ tools.viewcart_btn_bg_hover }};color: {{ tools.viewcart_btn_text_hover }};}
+						</style>
+
+						<div class="buttons-tools button-popover" ng:if="buttonsTools['viewcart']">
+							<div class="button-popover-row">
+								<kw:color model="tools.viewcart_btn_bg" default-value="rgba(167,167,167,1)"></kw:color>
+								<span class="row-label" ng:bind="::locale.btn_bg"></span>
+								<div class="clearfix"></div>
+							</div>
+							<div class="button-popover-row">
+								<kw:color model="tools.viewcart_btn_bg_hover" default-value="rgba(131,131,131,1)"></kw:color>
+								<span class="row-label" ng:bind="::locale.btn_bg_hov"></span>
+								<div class="clearfix"></div>
+							</div>
+							<div class="button-popover-row">
+								<kw:color model="tools.viewcart_btn_text" default-value="rgba(255,255,255,1)"></kw:color>
+								<span class="row-label" ng:bind="::locale.btn_txt"></span>
+								<div class="clearfix"></div>
+							</div>
+							<div class="button-popover-row">
+								<kw:color model="tools.viewcart_btn_text_hover" default-value="rgba(255,255,255,1)"></kw:color>
+								<span class="row-label" ng:bind="::locale.btn_txt_hov"></span>
+								<div class="clearfix"></div>
+							</div>
+							<div class="button-popover-row-button">
+								<button type="button" class="kw-btn preset-button preset-ok" ng:click="buttonsTools['viewcart'] = false;" ng:bind="::locale.btn_ready"></button>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="field buttons-field" outside-click="buttonsTools['checkout'] = false;">
+			<div class="field-row">
+				<span class="label field-cell field-left">
+					<span>
+						<i class="tooltip help" kw:tooltips data-text="{{::locale.help_35 | sanitize}}"></i> <span ng:bind-html="::locale.btn_check_title | sanitize"></span>
+					</span>
+				</span>
+
+				<div class="field-cell field-right">
+					<span class="preview-button checkout_btn" ng:click="buttonAction(tools.checkout_btn, 'checkout');"
+					      ng:class="{ 'button-disabled': !tools.checkout_btn }" ng:bind="tools.checkout_btn_txt[lang_id] || locale.btn_checkout"></span>
+
+					<kw:switcher on="{{::locale.text_enabled}}" off="{{::locale.text_disabled}}" model="tools.checkout_btn" default-value="true"></kw:switcher>
+
+					<div class="if-hide" ng:if="tools.checkout_btn">
+						<style>
+							.checkout_btn {background: {{ tools.checkout_btn_bg }};color: {{ tools.checkout_btn_text }};}
+							.checkout_btn:hover {background: {{ tools.checkout_btn_bg_hover }};color: {{ tools.checkout_btn_text_hover }};}
+						</style>
+
+						<div class="buttons-tools button-popover" ng:if="buttonsTools['checkout']">
+							<div class="button-popover-row">
+								<kw:color model="tools.checkout_btn_bg" default-value="rgba(167,167,167,1)"></kw:color>
+								<span class="row-label" ng:bind="::locale.btn_bg"></span>
+								<div class="clearfix"></div>
+							</div>
+							<div class="button-popover-row">
+								<kw:color model="tools.checkout_btn_bg_hover" default-value="rgba(131,131,131,1)"></kw:color>
+								<span class="row-label" ng:bind="::locale.btn_bg_hov"></span>
+								<div class="clearfix"></div>
+							</div>
+							<div class="button-popover-row">
+								<kw:color model="tools.checkout_btn_text" default-value="rgba(255,255,255,1)"></kw:color>
+								<span class="row-label" ng:bind="::locale.btn_txt"></span>
+								<div class="clearfix"></div>
+							</div>
+							<div class="button-popover-row">
+								<kw:color model="tools.checkout_btn_text_hover" default-value="rgba(255,255,255,1)"></kw:color>
+								<span class="row-label" ng:bind="::locale.btn_txt_hov"></span>
+								<div class="clearfix"></div>
+							</div>
+							<div class="button-popover-row-button">
+								<button type="button" class="kw-btn preset-button preset-ok" ng:click="buttonsTools['checkout'] = false;" ng:bind="::locale.btn_ready"></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="field_separator" ng:if="tools.options"></div>
+
+		<div class="field buttons-field" outside-click="buttonsTools['options'] = false;" ng:if="tools.options">
+			<div class="field-row">
+				<span class="label field-cell field-left">
+					<span>
+						<i class="tooltip help" kw:tooltips data-text="{{::locale.help_36 | sanitize}}"></i>{{::locale.button_opt}}
+					</span>
+				</span>
+
+				<div class="field-cell field-right">
+					<span class="preview-button options_btn" ng:click="buttonAction(true, 'options');" ng:bind="tools.options_btn_txt[lang_id] || locale.buy"></span>
+
+					<style>
+						.options_btn {background: {{ tools.options_btn_bg }};color: {{ tools.options_btn_text }};}
+						.options_btn:hover {background: {{ tools.options_btn_bg_hover }};color: {{ tools.options_text_hover }};}
+					</style>
+
+					<div class="buttons-tools button-popover options-popover" ng:if="buttonsTools['options']">
+						<div class="button-popover-row">
+							<kw:color model="tools.options_btn_bg" default-value="rgba(167,167,167,1)"></kw:color>
+							<span class="row-label" ng:bind="::locale.btn_bg"></span>
+							<div class="clearfix"></div>
+						</div>
+						<div class="button-popover-row">
+							<kw:color model="tools.options_btn_bg_hover" default-value="rgba(131,131,131,1)"></kw:color>
+							<span class="row-label" ng:bind="::locale.btn_bg_hov"></span>
+							<div class="clearfix"></div>
+						</div>
+						<div class="button-popover-row">
+							<kw:color model="tools.options_btn_text" default-value="rgba(255,255,255,1)"></kw:color>
+							<span class="row-label" ng:bind="::locale.btn_txt"></span>
+							<div class="clearfix"></div>
+						</div>
+						<div class="button-popover-row">
+							<kw:color model="tools.options_text_hover" default-value="rgba(255,255,255,1)"></kw:color>
+							<span class="row-label" ng:bind="::locale.btn_txt_hov"></span>
+							<div class="clearfix"></div>
+						</div>
+
+						<div class="button-popover-row">
+							<kw:color model="tools.options_btn_bg_disabled" default-value="rgba(167,167,167,1)"></kw:color>
+							<span class="row-label" ng:bind="::locale.btn_bg_disabled"></span>
+							<div class="clearfix"></div>
+						</div>
+						<div class="button-popover-row">
+							<kw:color model="tools.options_btn_text_disabled" default-value="rgba(255,255,255,1)"></kw:color>
+							<span class="row-label" ng:bind="::locale.btn_txt_disabled"></span>
+							<div class="clearfix"></div>
+						</div>
+
+						<div class="button-popover-row-button">
+							<button type="button" class="kw-btn preset-button preset-ok" ng:click="buttonsTools['options'] = false;" ng:bind="::locale.btn_ready"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="field buttons-field" outside-click="buttonsTools['options_file'] = false;" ng:if="tools.options">
+			<div class="field-row">
+				<span class="label field-cell field-left">
+					<span>
+						<i class="tooltip help" kw:tooltips data-text="{{::locale.help_119 | sanitize}}"></i>{{::locale.options_file}}
+					</span>
+				</span>
+
+				<div class="field-cell field-right">
+					<span class="preview-button options_file" ng:click="buttonAction(true, 'options_file');" ng:bind="tools.options_file_btn_txt[lang_id] || locale.file_btn"></span>
+
+					<style>
+						.options_file {background: {{ tools.options_file_btn_bg }};color: {{ tools.options_file_btn_text }};}
+						.options_file:hover {background: {{ tools.options_file_btn_bg_hover }};color: {{ tools.options_file_text_hover }};}
+					</style>
+
+					<div class="buttons-tools button-popover" ng:if="buttonsTools['options_file']">
+						<div class="button-popover-row">
+							<kw:color model="tools.options_file_btn_bg" default-value="rgba(167,167,167,1)"></kw:color>
+							<span class="row-label" ng:bind="::locale.btn_bg"></span>
+							<div class="clearfix"></div>
+						</div>
+						<div class="button-popover-row">
+							<kw:color model="tools.options_file_btn_bg_hover" default-value="rgba(131,131,131,1)"></kw:color>
+							<span class="row-label" ng:bind="::locale.btn_bg_hov"></span>
+							<div class="clearfix"></div>
+						</div>
+						<div class="button-popover-row">
+							<kw:color model="tools.options_file_btn_text" default-value="rgba(255,255,255,1)"></kw:color>
+							<span class="row-label" ng:bind="::locale.btn_txt"></span>
+							<div class="clearfix"></div>
+						</div>
+						<div class="button-popover-row">
+							<kw:color model="tools.options_file_text_hover" default-value="rgba(255,255,255,1)"></kw:color>
+							<span class="row-label" ng:bind="::locale.btn_txt_hov"></span>
+							<div class="clearfix"></div>
+						</div>
+						<div class="button-popover-row-button">
+							<button type="button" class="kw-btn preset-button preset-ok" ng:click="buttonsTools['options_file'] = false;" ng:bind="::locale.btn_ready"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>

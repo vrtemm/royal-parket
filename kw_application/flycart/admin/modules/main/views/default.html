@@ -1,0 +1,122 @@
+<div class="tools_block full">
+	<div class="tb_title"><span ng:bind="::locale.general_title"></span></div>
+	<div class="tb_wrapper">
+
+		<div class="field inter select">
+			<div class="field-row">
+				<span class="label field-cell field-left">
+					<span>
+						<i class="tooltip help" kw:tooltips data-text="{{::locale.help_1 | sanitize}}"></i>{{::locale.cart_type}}
+					</span>
+				</span>
+
+				<div class="field-cell field-right">
+					<select ng:model="tools.module_type" ng:change="typeSelect();" ui-jq="select2" ui-options="{{selectOptions}}" select2-scrollbar>
+						<option value="widget" ng:bind="::locale.widget_tools"></option>
+						<option value="module" ng:bind="::locale.module_tools"></option>
+						<option value="standart" ng:bind="::locale.standat"></option>
+					</select>
+				</div>
+			</div>
+		</div>
+
+		<div class="field_separator"></div>
+
+		<div class="field">
+			<div class="field-row">
+				<span class="label field-cell field-left">
+					<span>
+						<i class="tooltip help" kw:tooltips data-text="{{::locale.help_2 | sanitize}}"></i>{{::locale.mod_header}}
+					</span>
+				</span>
+
+				<div class="field-cell field-right">
+					<div class="languages" ng:repeat="language in languages">
+						<input type="text" ng:model="tools.header[language.language_id]" maxlength="45" placeholder="{{::locale.place_title_cart}}" />
+						<img class="lang-img" ng:src="view/image/flags/{{language.image}}" title="{{lang.name}}" alt />
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="field">
+			<div class="field-row">
+				<span class="label field-cell field-left">
+					<span>
+						<i class="tooltip help" kw:tooltips data-text="{{::locale.help_3 | sanitize}}"></i>{{::locale.opt_popup}}
+					</span>
+				</span>
+
+				<div class="field-cell field-right">
+					<kw:switcher on="{{::locale.text_enabled}}" off="{{::locale.text_disabled}}" model="tools.options" default-value="true"></kw:switcher>
+				</div>
+			</div>
+		</div>
+
+		<!-- -->
+		<div class="field select if-hide" ng:if="tools.module_type === 'widget'">
+			<div class="field-row">
+				<span class="label field-cell field-left">
+					<span>
+						<i class="tooltip help" kw:tooltips data-text="{{::locale.help_4 | sanitize}}"></i>{{::locale.click_act}}
+					</span>
+				</span>
+
+				<div class="field-cell field-right">
+					<select ng:model="tools.click_action" ui-jq="select2" ui-options="{{selectOptions}}" select2-scrollbar>
+						<option value="flycart" ng:bind="::locale.open_flycart"></option>
+						<option value="page" ng:bind="::locale.open_cart"></option>
+					</select>
+				</div>
+			</div>
+		</div>
+
+		<div class="field if-hide" ng:if="tools.click_action === 'page'">
+			<div class="field-row">
+				<span class="label field-cell field-left">
+					<span>
+						<i class="tooltip help" kw:tooltips data-text="{{::locale.help_5 | sanitize}}"></i>{{::locale.link_to}}
+					</span>
+				</span>
+
+				<div class="field-cell field-right">
+					<input type="text" ng:model="tools.click_action_link" placeholder="{{::locale.http}}" />
+				</div>
+			</div>
+		</div>
+
+		<div class="field select if-hide">
+			<div class="field-row">
+				<span class="label field-cell field-left">
+					<span>
+						<i class="tooltip help" kw:tooltips data-text="{{::locale.help_4 | sanitize}}"></i>{{::locale.click_act_mod}}
+					</span>
+				</span>
+
+				<div class="field-cell field-right">
+					<select ng:model="tools.click_action_mod" ui-jq="select2" ui-options="{{selectOptions}}" select2-scrollbar>
+						<option value="flycart" ng:bind="::locale.open_flycart"></option>
+						<option value="page" ng:bind="::locale.open_cart"></option>
+						<option value="none" ng:bind="::locale.open_cart_none"></option>
+					</select>
+				</div>
+			</div>
+		</div>
+
+		<div class="field if-hide" ng:if="tools.click_action_mod === 'page'">
+			<div class="field-row">
+				<span class="label field-cell field-left">
+					<span>
+						<i class="tooltip help" kw:tooltips data-text="{{::locale.help_5 | sanitize}}"></i>{{::locale.link_to}}
+					</span>
+				</span>
+
+				<div class="field-cell field-right">
+					<input type="text" ng:model="tools.click_action_mod_link" placeholder="{{::locale.http}}" />
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>

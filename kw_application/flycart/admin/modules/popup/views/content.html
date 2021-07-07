@@ -1,0 +1,250 @@
+<div class="tools_block">
+	<div class="tb_title">
+		<span ng:bind="::locale.popups_cont_title"></span>
+	</div>
+
+	<div class="tb_wrapper">
+
+		<div class="field">
+			<div class="field-row">
+				<span class="label field-cell field-left">
+					<span>
+						<i class="tooltip help" kw:tooltips data-text="{{::locale.help_18 | sanitize}}"></i>{{::locale.bg}}
+					</span>
+				</span>
+
+				<div class="field-cell field-right">
+					<kw:color model="tools.popup_bg" default-value="rgba(252,252,252,1)"></kw:color>
+				</div>
+			</div>
+		</div>
+
+		<div class="field">
+			<div class="field-row">
+				<span class="label field-cell field-left">
+					<span>
+						<i class="tooltip help" kw:tooltips data-text="{{::locale.help_19 | sanitize}}"></i>{{::locale.text}}
+					</span>
+				</span>
+
+				<div class="field-cell field-right">
+					<kw:color model="tools.popup_text_color" default-value="rgba(76,76,76,1)"></kw:color>
+				</div>
+			</div>
+		</div>
+
+		<div class="field_separator"></div>
+
+		<div class="field inter checkbox-list top-label">
+			<div class="field-row">
+				<span class="label field-cell field-left">
+					<span>
+						<i class="tooltip help" kw:tooltips data-text="{{::locale.help_21 | sanitize}}"></i>{{::locale.content}}
+					</span>
+				</span>
+
+				<div class="field-cell field-right">
+					<kw:checkbox label="{{::locale.p_image}}" model="tools.popup_imgage" default-value="true"></kw:checkbox>
+					<kw:checkbox label="{{::locale.p_name}}" model="tools.popup_name" default-value="true"></kw:checkbox>
+					<kw:checkbox label="{{::locale.p_quant}}" model="tools.popup_counter" default-value="true"></kw:checkbox>
+					<kw:checkbox label="{{::locale.p_price}}" model="tools.popup_price" default-value="true"></kw:checkbox>
+					<kw:checkbox label="{{::locale.p_remove}}" model="tools.popup_premove" default-value="true"></kw:checkbox>
+					<kw:checkbox label="{{::locale.p_total}}" model="tools.show_totals" default-value="true"></kw:checkbox>
+				</div>
+			</div>
+		</div>
+
+		<div class="field_separator"></div>
+
+		<div class="field numset if-hide" ng:if="tools.popup_imgage">
+			<div class="field-row">
+				<span class="label field-cell field-left">
+					<span>
+						<i class="tooltip help" kw:tooltips data-text="{{::locale.help_22 | sanitize}}"></i>{{::locale.prod_img}}
+					</span>
+				</span>
+
+				<div class="field-cell field-right">
+					<kw:number label="{{::locale.width_min}}" model="tools.popup_imgage_width" min="0"></kw:number>
+					<kw:number label="{{::locale.height_min}}" model="tools.popup_imgage_height" min="0"></kw:number>
+					<span class="right-label" ng:bind="::locale.px"></span>
+				</div>
+			</div>
+		</div>
+
+		<div class="field if-hide" ng:if="tools.popup_name">
+			<div class="field-row">
+				<span class="label field-cell field-left">
+					<span>
+						<i class="tooltip help" kw:tooltips data-text="{{::locale.help_23 | sanitize}}"></i>{{::locale.name}}
+					</span>
+				</span>
+
+				<div class="field-cell field-right">
+					<kw:color top-label="{{::locale.default}}" model="tools.popup_link_color" default-value="rgba(56,176,227,1)"></kw:color>
+					<span class="slash-separator">/</span>
+					<kw:color top-label="{{::locale.hover}}" model="tools.popup_link_hover_color" default-value="rgba(56,176,227,1)"></kw:color>
+				</div>
+			</div>
+		</div>
+
+		<div class="field if-hide" ng:if="tools.popup_price">
+			<div class="field-row">
+				<span class="label field-cell field-left">
+					<span>
+						<i class="tooltip help" kw:tooltips data-text="{{::locale.help_24 | sanitize}}"></i>{{::locale.price}}
+					</span>
+				</span>
+
+				<div class="field-cell field-right">
+					<kw:color model="tools.popup_price_color" default-value="rgba(245,245,245,1)"></kw:color>
+				</div>
+			</div>
+		</div>
+
+		<div class="field inter if-hide" ng:if="tools.popup_premove">
+			<div class="field-row">
+				<span class="label field-cell field-left">
+					<span>
+						<i class="tooltip help" kw:tooltips data-text="{{::locale.help_25 | sanitize}}"></i>{{::locale.remove}}
+					</span>
+				</span>
+
+				<div class="field-cell field-right">
+					<kw:color top-label="{{::locale.default}}" model="tools.popup_remove" default-value="rgba(163,163,163,1)"></kw:color>
+					<span class="slash-separator">/</span>
+					<kw:color top-label="{{::locale.hover}}" model="tools.popup_remove_hover" default-value="rgba(186,185,185,1)"></kw:color>
+				</div>
+			</div>
+		</div>
+
+		<div class="field color-switch" ng:if="tools.popup_price">
+			<div class="field-row">
+				<span class="label field-cell field-left">
+					<span>
+						<i class="tooltip help" kw:tooltips data-text="{{::locale.help_128 | sanitize}}"></i>{{::locale.popup_max_on}}
+					</span>
+				</span>
+
+				<div class="field-cell field-right">
+					<kw:switcher on="{{::locale.text_enabled}}" off="{{::locale.text_disabled}}" model="tools.popup_max_on" default-value="false"></kw:switcher>
+				</div>
+			</div>
+		</div>
+
+		<div class="field color-switch" ng:if="tools.popup_price">
+			<div class="field-row">
+				<span class="label field-cell field-left">
+					<span>
+						<i class="tooltip help" kw:tooltips data-text="{{::locale.help_120 | sanitize}}"></i>{{::locale.popup_alerts}}
+					</span>
+				</span>
+
+				<div class="field-cell field-right">
+					<kw:switcher on="{{::locale.text_enabled}}" off="{{::locale.text_disabled}}" model="tools.popup_alert_on" default-value="true"></kw:switcher>
+					<kw:color class="if-hide" model="tools.popup_alert_color" default-value="rgba(245,245,245,1)" ng:if="tools.popup_alert_on"></kw:color>
+				</div>
+			</div>
+		</div>
+
+		<div class="field color-switch" ng:if="tools.popup_price">
+			<div class="field-row">
+				<span class="label field-cell field-left">
+					<span>
+						<i class="tooltip help" kw:tooltips data-text="{{::locale.help_124 | sanitize}}"></i>{{::locale.popup_infos}}
+					</span>
+				</span>
+
+				<div class="field-cell field-right">
+					<kw:switcher on="{{::locale.text_enabled}}" off="{{::locale.text_disabled}}" model="tools.popup_info_on" default-value="true"></kw:switcher>
+					<kw:color class="if-hide" model="tools.popup_info_color" default-value="rgba(245,245,245,1)" ng:if="tools.popup_info_on"></kw:color>
+				</div>
+			</div>
+		</div>
+
+		<div class="field_separator"></div>
+
+		<div class="field animations">
+			<div class="field-row">
+				<span class="label field-cell field-left">
+					<span>
+						<i class="tooltip help" kw:tooltips data-text="{{::locale.help_26 | sanitize}}"></i>{{::locale.empty}}
+					</span>
+				</span>
+
+				<div class="field-cell field-right">
+					<div class="radioset">
+						<label ng:class="{ 'active': tools.popup_empty_type === 'text' }">{{::locale.txt_wd}}
+							<input type="radio" ng:model="tools.popup_empty_type" value="text" />
+						</label>
+						<label ng:class="{ 'active': tools.popup_empty_type === 'image' }">{{::locale.img_wd}}
+							<input type="radio" ng:model="tools.popup_empty_type" value="image" />
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="field if-hide" ng:if="tools.popup_empty_type === 'text'">
+			<div class="field-row">
+				<span class="label field-cell field-left">
+					<span>
+						<i class="tooltip help" kw:tooltips data-text="{{::locale.help_27 | sanitize}}"></i>{{::locale.text}}
+					</span>
+				</span>
+
+				<div class="field-cell field-right">
+					<kw:color model="tools.popup_empty_text" default-value="rgba(75,75,75,1)"></kw:color>
+				</div>
+			</div>
+		</div>
+
+		<div class="field" ng:if="tools.popup_empty_type === 'text'">
+			<div class="field-row">
+				<span class="label field-cell field-left">
+					<span>
+						<i class="tooltip help" kw:tooltips data-text="{{::locale.help_121 | sanitize}}"></i>{{::locale.empty_cart_text}}
+					</span>
+				</span>
+
+				<div class="field-cell field-right">
+					<div class="languages" ng:repeat="language in languages">
+						<input type="text" ng:model="tools.popup_empty_text_lang[language.language_id]" maxlength="45" placeholder="{{::locale.empty_text}}" />
+						<img class="lang-img" ng:src="view/image/flags/{{language.image}}" title="{{lang.name}}" alt />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="field top-label if-hide" ng:if="tools.popup_empty_type === 'image'">
+			<div class="field-row">
+				<span class="label field-cell field-left">
+					<span>
+						<i class="tooltip help" kw:tooltips data-text="{{::locale.help_28 | sanitize}}"></i>{{::locale.image}}
+					</span>
+				</span>
+
+				<div class="field-cell field-right">
+					<kw:custom-image
+							label="{{::locale.image}}"
+							model="tools.popup_empty_image"
+							button-manager="{{::locale.select}}"
+							button-upload="{{::locale.upload}}"
+							button-save="{{::locale.save_select}}"
+							button-cancel="{{::locale.cancel_sel}}"
+							button-zoom="{{::locale.zoom_sel}}"
+							button-delete="{{::locale.delete_sel}}"
+							button-close="{{::locale.close_sel}}"
+							directory="../kw_application/flycart/images/empty/"
+							repeat="no-repeat"
+							position="50% 50%"
+							default-img="{ src: 'square-wave.png', width: 260, height: 260 }"
+							module="kw_flycart"
+							token="{{token}}">
+					</kw:custom-image>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>

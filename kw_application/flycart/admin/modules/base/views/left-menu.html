@@ -1,0 +1,61 @@
+<ul>
+	<li class="general_tools left-link" title="{{::locale.general_tools}}"
+	    ui-sref="base.main"
+	    ui-sref-active="active">
+		<span ng:bind="::locale.general_tools"></span>
+	</li>
+
+	<li class="popup_tools left-link" title="{{::locale.popup_tools}}"
+	    ui-sref="base.popup"
+	    ui-sref-active="active"
+	    ng:if="tools.click_action === 'flycart' || tools.options === true || tools.click_action_mod === 'flycart'">
+		<span ng:bind="::locale.popup_tools"></span>
+	</li>
+
+	<li class="widget_tools left-link" title="{{::locale.widget_tools}}"
+	    ui-sref="base.widget"
+	    ui-sref-active="active"
+	    ng:if="tools.module_type === 'widget'">
+		<span ng:bind="::locale.widget_tools"></span>
+	</li>
+
+	<li class="module_tools left-link" title="{{::locale.module_tools}}"
+	    ui-sref="base.module"
+	    ui-sref-active="active"
+	    ng:if="tools.module_type === 'module'">
+		<span ng:bind="::locale.module_tools"></span>
+	</li>
+
+	<li class="notice_tools left-link" title="{{::locale.notice_tools}}"
+	    ui-sref="base.notice"
+	    ui-sref-active="active">
+		<span ng:bind="::locale.notice_tools"></span>
+	</li>
+
+	<li class="effects_tools left-link" title="{{::locale.effects_tools}}"
+	    ui-sref="base.effects"
+	    ui-sref-active="active">
+		<span ng:bind="::locale.effects_tools"></span>
+	</li>
+
+	<li class="locales_tools left-link" title="{{::locale.locales_tools}}"
+	    ui-sref="base.locales"
+	    ui-sref-active="active">
+		<span ng:bind="::locale.locales_tools"></span>
+	</li>
+
+	<li class="advanced_tools left-link" title="{{::locale.advanced_tools}}"
+	    ui-sref="base.advanced"
+	    ui-sref-active="active">
+		<span ng:bind="::locale.advanced_tools"></span>
+	</li>
+
+	<li class="faq_tools left-link" title="{{::locale.faq_tools}}"
+	    ui-sref="base.faq"
+	    ui-sref-active="active">
+		<span ng:bind="::locale.faq_tools"></span>
+	</li>
+</ul>
+
+<a class="turn left-link open" ng:click="slideLeft()" ng:bind="::locale.turn" title="{{::locale.collapse}}"></a>
+<a class="turn left-link close" ng:click="slideLeft()" ng:bind="::locale.turn" title="{{::locale.expand}}"></a>

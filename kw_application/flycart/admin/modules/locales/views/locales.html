@@ -1,0 +1,355 @@
+<div class="menu_tab">
+	<div class="tools_block full">
+		<div class="tb_title">
+			<span ng:bind="::locale.locales_title"></span>
+		</div>
+
+		<div class="tb_wrapper">
+
+			<div class="title_seperator" ng:bind-html="::locale.tools_l | sanitize"></div>
+			<div class="field_separator"></div>
+
+			<div class="field">
+				<div class="field-row">
+					<span class="label field-cell field-left">
+						<span>
+							<i class="tooltip help" kw:tooltips data-text="{{::locale.help_2 | sanitize}}"></i>{{::locale.mod_header}}
+						</span>
+					</span>
+					<div class="field-cell field-right">
+						<div class="languages" ng:repeat="language in languages">
+							<input type="text" ng:model="tools.header[language.language_id]" maxlength="45" placeholder="{{::locale.place_title_cart}}" />
+							<img class="lang-img" ng:src="view/image/flags/{{language.image}}" title="{{lang.name}}" alt />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="field_separator"></div>
+			<div class="title_seperator" ng:bind-html="::locale.popup | sanitize"></div>
+			<div class="field_separator"></div>
+
+			<div class="field">
+				<div class="field-row">
+				<span class="label field-cell field-left">
+					<span>
+						<i class="tooltip help" kw:tooltips data-text="{{::locale.help_121 | sanitize}}"></i>{{::locale.empty_cart_text}}
+					</span>
+				</span>
+
+					<div class="field-cell field-right">
+						<div class="languages" ng:repeat="language in languages">
+							<input type="text" ng:model="tools.popup_empty_text_lang[language.language_id]" maxlength="45" placeholder="{{::locale.empty_text}}" />
+							<img class="lang-img" ng:src="view/image/flags/{{language.image}}" title="{{lang.name}}" alt />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="field">
+				<div class="field-row">
+					<span class="label field-cell field-left">
+						<span>
+							<i class="tooltip help" kw:tooltips data-text="{{::locale.help_33 | sanitize}}"></i> <span ng:bind-html="::locale.btn_cont_title | sanitize"></span>
+						</span>
+					</span>
+					<div class="field-cell field-right">
+						<div class="languages" ng:repeat="language in languages">
+							<input type="text" ng:model="tools.continue_btn_txt[language.language_id]" maxlength="45" placeholder="{{::locale.btn_continue}}" />
+							<img class="lang-img" ng:src="view/image/flags/{{language.image}}" title="{{lang.name}}" alt />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="field">
+				<div class="field-row">
+					<span class="label field-cell field-left">
+						<span>
+							<i class="tooltip help" kw:tooltips data-text="{{::locale.help_34 | sanitize}}"></i> <span ng:bind-html="::locale.btn_view_title | sanitize"></span>
+						</span>
+					</span>
+					<div class="field-cell field-right">
+						<div class="languages" ng:repeat="language in languages">
+							<input type="text" ng:model="tools.viewcart_btn_txt[language.language_id]" maxlength="45" placeholder="{{::locale.btn_viewcart}}" />
+							<img class="lang-img" ng:src="view/image/flags/{{language.image}}" title="{{lang.name}}" alt />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="field">
+				<div class="field-row">
+					<span class="label field-cell field-left">
+						<span>
+							<i class="tooltip help" kw:tooltips data-text="{{::locale.help_35 | sanitize}}"></i> <span ng:bind-html="::locale.btn_check_title | sanitize"></span>
+						</span>
+					</span>
+					<div class="field-cell field-right">
+						<div class="languages" ng:repeat="language in languages">
+							<input type="text" ng:model="tools.checkout_btn_txt[language.language_id]" maxlength="45" placeholder="{{::locale.btn_checkout}}" />
+							<img class="lang-img" ng:src="view/image/flags/{{language.image}}" title="{{lang.name}}" alt />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="field_separator"></div>
+			<div class="title_seperator" ng:bind-html="::locale.opts | sanitize"></div>
+			<div class="field_separator"></div>
+
+			<div class="field">
+				<div class="field-row">
+					<span class="label field-cell field-left">
+						<span>
+							<i class="tooltip help" kw:tooltips data-text="{{::locale.help_36 | sanitize}}"></i> <span ng:bind-html="::locale.btn_opts_title | sanitize"></span>
+						</span>
+					</span>
+					<div class="field-cell field-right">
+						<div class="languages" ng:repeat="language in languages">
+							<input type="text" ng:model="tools.options_btn_txt[language.language_id]" maxlength="45" placeholder="{{::locale.buy}}" />
+							<img class="lang-img" ng:src="view/image/flags/{{language.image}}" title="{{lang.name}}" alt />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="field">
+				<div class="field-row">
+					<span class="label field-cell field-left">
+						<span>
+							<i class="tooltip help" kw:tooltips data-text="{{::locale.help_119 | sanitize}}"></i>{{::locale.options_file}}
+						</span>
+					</span>
+					<div class="field-cell field-right">
+						<div class="languages" ng:repeat="language in languages">
+							<input type="text" ng:model="tools.options_file_btn_txt[language.language_id]" maxlength="45" placeholder="{{::locale.file_btn}}" />
+							<img class="lang-img" ng:src="view/image/flags/{{language.image}}" title="{{lang.name}}" alt />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="field_separator"></div>
+			<div class="title_seperator" ng:bind-html="::locale.wdgt | sanitize"></div>
+			<div class="field_separator"></div>
+
+			<div class="field if-hide">
+				<div class="field-row">
+					<span class="label field-cell field-left">
+						<span>
+							<i class="tooltip help" kw:tooltips data-text="{{::locale.help_38 | sanitize}}"></i>{{::locale.title_text}}
+						</span>
+					</span>
+
+					<div class="field-cell field-right">
+						<div class="languages" ng:repeat="language in languages">
+							<input type="text" ng:model="tools.widget_title_text[language.language_id]" placeholder="{{::locale.your_cart}}" />
+							<img class="lang-img" ng:src="view/image/flags/{{language.image}}" title="{{lang.name}}" alt />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="field textarea top-label">
+				<div class="field-row">
+					<span class="label field-cell field-left">
+						<span>
+							<i class="tooltip help" kw:tooltips data-text="{{::locale.help_44 | sanitize}}"></i>{{::locale.widget_content}}
+						</span>
+						</span>
+					</span>
+
+					<div class="field-cell field-right">
+						<div class="languages textarea-lang" ng:repeat="language in languages"
+						     ng:init="tools.widget_text[language.language_id] = tools.widget_text[language.language_id] ? tools.widget_text[language.language_id] : '[items]'">
+
+							<div class="textarea-desc" ng:if="$index === 0">
+								<span ng:click="appendText('[items]', language.language_id)" class="text-append">[<span>items</span>]</span>{{::locale.item_count}}<br />
+								<span ng:click="appendText('[name]', language.language_id)" class="text-append">[<span>name</span>]</span>{{::locale.item_names}}<br />
+								<span ng:click="appendText('[total]', language.language_id)" class="text-append">[<span>total</span>]</span>{{::locale.item_sum}}
+							</div>
+							<div class="textarea-desc" ng:if="$index > 0">
+								<span ng:click="appendText('[items]', language.language_id)" class="text-append">[<span>items</span>]</span>
+								<span ng:click="appendText('[name]', language.language_id)" class="text-append">[<span>name</span>]</span>
+								<span ng:click="appendText('[total]', language.language_id)" class="text-append">[<span>total</span>]</span>
+							</div>
+
+							<textarea ng:model="tools.widget_text[language.language_id]"></textarea>
+							<img class="lang-img" ng:src="view/image/flags/{{language.image}}" title="{{lang.name}}" alt class="lang-icon" />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="field_separator"></div>
+			<div class="title_seperator" ng:bind-html="::locale.mdl | sanitize"></div>
+			<div class="field_separator"></div>
+
+			<div class="field">
+				<div class="field-row">
+					<span class="label field-cell field-left">
+						<span>
+							<i class="tooltip help" kw:tooltips data-text="{{::locale.help_122 | sanitize}}"></i>{{::locale.empty_cart_text}}
+						</span>
+					</span>
+
+					<div class="field-cell field-right">
+						<div class="languages" ng:repeat="language in languages">
+							<input type="text" ng:model="tools.module_empty_text_lang[language.language_id]" maxlength="45" placeholder="{{::locale.empty_text}}" />
+							<img class="lang-img" ng:src="view/image/flags/{{language.image}}" title="{{lang.name}}" alt />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="field">
+				<div class="field-row">
+					<span class="label field-cell field-left">
+						<span>
+							<i class="tooltip help" kw:tooltips data-text="{{::locale.help_52 | sanitize}}"></i> <span ng:bind-html="::locale.btn_view_title | sanitize"></span>
+						</span>
+					</span>
+
+					<div class="field-cell field-right">
+						<div class="languages" ng:repeat="language in languages">
+							<input type="text" ng:model="tools.module_tocart_btn_text[language.language_id]" maxlength="45" placeholder="{{::locale.btn_viewcart}}" />
+							<img class="lang-img" ng:src="view/image/flags/{{language.image}}" title="{{lang.name}}" alt />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="field">
+				<div class="field-row">
+					<span class="label field-cell field-left">
+						<span>
+							<i class="tooltip help" kw:tooltips data-text="{{::locale.help_53 | sanitize}}"></i> <span ng:bind-html="::locale.btn_check_title | sanitize"></span>
+						</span>
+					</span>
+
+					<div class="field-cell field-right">
+						<div class="languages" ng:repeat="language in languages">
+							<input type="text" ng:model="tools.module_checkout_btn_text[language.language_id]" maxlength="45" placeholder="{{::locale.btn_checkout}}" />
+							<img class="lang-img" ng:src="view/image/flags/{{language.image}}" title="{{lang.name}}" alt />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="field_separator"></div>
+			<div class="title_seperator" ng:bind-html="::locale.msg_nt | sanitize"></div>
+			<div class="field_separator"></div>
+
+			<div class="field">
+				<div class="field-row">
+					<span class="label field-cell field-left">
+						<span>
+							<i class="tooltip help" kw:tooltips data-text="{{::locale.help_66 | sanitize}}"></i> <span ng:bind-html="::locale.btn_view_title | sanitize"></span>
+						</span>
+					</span>
+
+					<div class="field-cell field-right">
+						<div class="languages" ng:repeat="language in languages">
+							<input type="text" ng:model="tools.noti_continue_btn[language.language_id]" maxlength="45" placeholder="{{::locale.btn_viewcart}}" />
+							<img class="lang-img" ng:src="view/image/flags/{{language.image}}" title="{{lang.name}}" alt />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="field">
+				<div class="field-row">
+					<span class="label field-cell field-left">
+						<span>
+							<i class="tooltip help" kw:tooltips data-text="{{::locale.help_65 | sanitize}}"></i> <span ng:bind-html="::locale.btn_check_title | sanitize"></span>
+						</span>
+					</span>
+
+					<div class="field-cell field-right">
+						<div class="languages" ng:repeat="language in languages">
+							<input type="text" ng:model="tools.noti_viewcart_btn[language.language_id]" maxlength="45" placeholder="{{::locale.btn_checkout}}" />
+							<img class="lang-img" ng:src="view/image/flags/{{language.image}}" title="{{lang.name}}" alt />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="field_separator"></div>
+			<div class="title_seperator" ng:bind-html="::locale.msg_lt | sanitize"></div>
+			<div class="field_separator"></div>
+
+			<div class="field">
+				<div class="field-row">
+					<span class="label field-cell field-left">
+						<span>
+							<i class="tooltip help" kw:tooltips data-text="{{::locale.help_79 | sanitize}}"></i> <span ng:bind-html="::locale.btn_cont_title | sanitize"></span>
+						</span>
+					</span>
+
+					<div class="field-cell field-right">
+						<div class="languages" ng:repeat="language in languages">
+							<input type="text" ng:model="tools.light_continue_btn[language.language_id]" maxlength="45" placeholder="{{::locale.btn_continue}}" />
+							<img class="lang-img" ng:src="view/image/flags/{{language.image}}" title="{{lang.name}}" alt />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="field">
+				<div class="field-row">
+					<span class="label field-cell field-left">
+						<span>
+							<i class="tooltip help" kw:tooltips data-text="{{::locale.help_78 | sanitize}}"></i> <span ng:bind-html="::locale.btn_check_title | sanitize"></span>
+						</span>
+					</span>
+
+					<div class="field-cell field-right">
+						<div class="languages" ng:repeat="language in languages">
+							<input type="text" ng:model="tools.light_viewcart_btn[language.language_id]" maxlength="45" placeholder="{{::locale.btn_checkout}}" />
+							<img class="lang-img" ng:src="view/image/flags/{{language.image}}" title="{{lang.name}}" alt />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="field_separator"></div>
+			<div class="title_seperator" ng:bind-html="::locale.msg_adv | sanitize"></div>
+			<div class="field_separator"></div>
+
+			<div class="field">
+				<div class="field-row">
+					<span class="label field-cell field-left">
+						<span>
+							<i class="tooltip help" kw:tooltips data-text="{{::locale.help_101 | sanitize}}"></i> <span ng:bind-html="::locale.btn_check_title | sanitize"></span>
+						</span>
+					</span>
+
+					<div class="field-cell field-right">
+						<div class="languages" ng:repeat="language in languages">
+							<input type="text" ng:model="tools.advanced_viewcart_btn[language.language_id]" maxlength="45" placeholder="{{::locale.btn_checkout}}" />
+							<img class="lang-img" ng:src="view/image/flags/{{language.image}}" title="{{lang.name}}" alt />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="field">
+				<div class="field-row">
+					<span class="label field-cell field-left">
+						<span>
+							<i class="tooltip help" kw:tooltips data-text="{{::locale.help_102 | sanitize}}"></i> <span ng:bind-html="::locale.btn_cont_title | sanitize"></span>
+						</span>
+					</span>
+
+					<div class="field-cell field-right">
+						<div class="languages" ng:repeat="language in languages">
+							<input type="text" ng:model="tools.advanced_continue_btn[language.language_id]" maxlength="45" placeholder="{{::locale.btn_continue}}" />
+							<img class="lang-img" ng:src="view/image/flags/{{language.image}}" title="{{lang.name}}" alt />
+						</div>
+					</div>
+				</div>
+			</div>
+
+	</div>
+</div>

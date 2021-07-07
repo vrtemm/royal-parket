@@ -1,0 +1,116 @@
+<div class="tools_block full" ng:controller="presetsController">
+	<div class="tb_title">
+		<span ng:bind="::locale.preset_tools"></span>
+	</div>
+
+	<div class="tb_wrapper">
+		<div class="presets-type">
+			<div ng:repeat="preset in presets" class="{{ ::preset.class }} preset-item" ng:class="{ 'active': tools.preset == $index }">
+				<label>
+					<input type="radio" ng:model="tools.preset"
+					       ng:value="$index" ng:change="selectPreset($index)" />
+
+					<img ng:src="../kw_application/flycart/images/preset_img/{{ preset.preview }}" alt="" />
+					<span ng:bind-html="::preset.preset_name"></span>
+				</label>
+
+				<span outside-click="openTools[$index] = false;">
+					<span class="preset-tools" ng:click="openTools[$index] = true;"></span>
+
+					<div class="preset-popover preset-actions" ng:if="openTools[$index] === true">
+						<span class="popover-title"
+						      ng:bind="::locale.this_tools_remove"></span>
+
+						<kw:radio
+								label="{{::locale.reset}}"
+								model="presetRadio"
+								value="reset"></kw:radio>
+
+						<span class="preset-act-desc"
+						      ng:bind-html="::locale.reset_preset | sanitize"></span>
+
+						<kw:radio
+								label="{{::locale.delete}}"
+								model="presetRadio"
+								value="delete"></kw:radio>
+
+						<span class="preset-act-desc"
+						      ng:bind-html="::locale.delete_tool_preset | sanitize"></span>
+
+						<button type="button" class="kw-btn preset-button"
+						        ng:click="openTools[$index] = false"
+						        ng:bind="::locale.cancell_preset"></button>
+
+						<button type="button" class="kw-btn preset-button preset-ok"
+						        ng:click="presetAction(presetRadio, preset.preset_id, $index);openTools[$index] = false"
+						        ng:bind="::locale.apply_preset"></button>
+					</div>
+
+				</span>
+
+			</div>
+
+			<div class="add-preset" ng:class="{ 'open': openPopover === true }" outside-click="closeAddPopover();">
+				<label class="add-title"
+				       ng:click="openAddPopover(locale.new_preset);"
+				       ng:bind="::locale.add_preset"></label>
+
+				<div class="preset-popover add-preset-popover" ng:if="openPopover === true">
+					<span class="popover-title"  ng:bind-html="::locale.preset_name | sanitize"></span>
+
+					<input type="text" ng:model="newPreset.name" id="preset-name-input"
+					       placeholder="{{::locale.preset_place}}" ng:class="{ 'error': nameInvalid }" />
+
+					<span class="popover-sub-title" ng:bind-html="::locale.add_preset | sanitize"></span>
+
+					<kw:radio label="{{::locale.this_tools}}" model="newPreset.preset" value="self"></kw:radio>
+					<kw:radio label="{{::locale.other_preset}}" model="newPreset.preset" value="other"></kw:radio>
+
+					<select id="presetId" ng:model="newPreset.id" ui-jq="select2" ui-options="{{selectOptions}}" select2-scrollbar
+					        ng:options="p.preset_id as p.preset_name for p in presets"
+					        ng:disabled="newPreset.preset === 'self'"></select>
+
+					<button type="button" class="kw-btn preset-button"
+					        ng:click="closeAddPopover();"
+					        ng:bind="::locale.cancell_preset"></button>
+
+					<button type="button" class="kw-btn preset-button preset-ok"
+					        ng:click="addPreset(presets, newPreset.name, newPreset.preset, newPreset.id);"
+					        ng:bind="::locale.apply_preset"></button>
+				</div>
+			</div>
+
+			<div class="load-preset" ng:class="{ 'open': openLoad === true }" outside-click="closeLoadPopover();">
+				<label class="load-title"
+				       ng:click="openLoadPopover();"
+				       ng:bind-html="::locale.load_preset | sanitize"></label>
+
+				<div class="preset-popover load-preset-popover" ng:if="openLoad === true"
+			     flow-init="{
+				      singleFile: true,
+				      target: 'index.php?route=module/kw_flycart/uploadPreset&token=' + token,
+				      testChunks: false,
+				      fileParameterName: 'uploadpreset',
+				      query: {'url': '../kw_application/flycart/tmp/'},
+				      successStatuses: [200, 201, 202],
+						}"
+			     flow-file-added="!!{zip:1,gzip:1}[$file.getExtension()]"
+			     flow-file-success="uploadSuccess($file, $message, $chunk)"
+			     flow-files-submitted="$flow.upload()">
+
+					<span class="popover-title"
+					      ng:bind-html="::locale.load_preset_title | sanitize"></span>
+
+					<div ng:bind-html="::locale.load_preset_desc | sanitize"></div>
+
+					<button type="button" class="kw-btn preset-button preset-ok" id="upload-preset" flow-btn
+					        ng:click="closeLoadPopover();" ng:bind="::locale.upload"
+					></button>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+
+		</div>
+
+	</div>
+</div>

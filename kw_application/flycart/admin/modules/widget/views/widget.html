@@ -1,0 +1,299 @@
+<div class="menu_tab">
+	<div class="tools_block full">
+		<div class="tb_title">
+			<span ng:bind="::locale.widget_title"></span>
+		</div>
+
+		<div class="tb_wrapper">
+
+			<div class="field">
+				<div class="field-row">
+					<span class="label field-cell field-left">
+						<span>
+							<i class="tooltip help" kw:tooltips data-text="{{::locale.help_37 | sanitize}}"></i>{{::locale.title}}
+						</span>
+					</span>
+
+					<div class="field-cell field-right">
+						<kw:switcher on="{{::locale.text_enabled}}" off="{{::locale.text_disabled}}" model="tools.widget_title" default-value="false"></kw:switcher>
+					</div>
+				</div>
+			</div>
+
+			<div class="field if-hide" ng:if="tools.widget_title">
+				<div class="field-row">
+					<span class="label field-cell field-left">
+						<span>
+							<i class="tooltip help" kw:tooltips data-text="{{::locale.help_38 | sanitize}}"></i>{{::locale.title_text}}
+						</span>
+					</span>
+
+					<div class="field-cell field-right">
+						<div class="languages" ng:repeat="language in languages">
+							<input type="text" ng:model="tools.widget_title_text[language.language_id]" placeholder="{{::locale.your_cart}}" />
+							<img class="lang-img" ng:src="view/image/flags/{{language.image}}" title="{{lang.name}}" alt />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="field">
+				<div class="field-row">
+					<span class="label field-cell field-left">
+						<span>
+							<i class="tooltip help" kw:tooltips data-text="{{::locale.help_39 | sanitize}}"></i>{{::locale.show_if_empty}}
+						</span>
+					</span>
+
+					<div class="field-cell field-right">
+						<kw:switcher on="{{::locale.text_enabled}}" off="{{::locale.text_disabled}}" model="tools.widget_empty" default-value="true"></kw:switcher>
+					</div>
+				</div>
+			</div>
+
+			<div class="field inter">
+				<div class="field-row">
+					<span class="label field-cell field-left">
+						<span>
+							<i class="tooltip help" kw:tooltips data-text="{{::locale.help_40 | sanitize}}"></i>
+							<span ng:bind-html="::locale.show_null | sanitize"></span>
+						</span>
+					</span>
+
+					<div class="field-cell field-right">
+						<kw:switcher on="{{::locale.text_enabled}}" off="{{::locale.text_disabled}}" model="tools.widget_null" default-value="true"></kw:switcher>
+					</div>
+				</div>
+			</div>
+
+			<div class="field_separator"></div>
+
+			<div class="field numset if-hide" ng:if="tools.popup_imgage">
+				<div class="field-row">
+					<span class="label field-cell field-left">
+						<span>
+							<i class="tooltip help" kw:tooltips data-text="{{::locale.help_123 | sanitize}}"></i>{{::locale.widget_size}}
+						</span>
+					</span>
+
+					<div class="field-cell field-right">
+						<kw:number label="{{::locale.width_min}}" model="tools.widget_width" min="0"></kw:number>
+						<kw:number label="{{::locale.height_min}}" model="tools.widget_height" min="0"></kw:number>
+						<span class="right-label" ng:bind="::locale.px"></span>
+					</div>
+				</div>
+			</div>
+
+			<div class="field inter top-label">
+				<div class="field-row">
+					<span class="label field-cell field-left">
+						<span>
+							<i class="tooltip help" kw:tooltips data-text="{{::locale.help_41 | sanitize}}"></i>{{::locale.image}}
+						</span>
+					</span>
+
+					<div class="field-cell field-right">
+						<kw:custom-image
+								label="{{::locale.select_img}}"
+								model="tools.widget_image"
+								button-manager="{{::locale.select}}"
+								button-upload="{{::locale.upload}}"
+								button-save="{{::locale.save_select}}"
+								button-cancel="{{::locale.cancel_sel}}"
+								button-zoom="{{::locale.zoom_sel}}"
+								button-delete="{{::locale.delete_sel}}"
+								button-close="{{::locale.close_sel}}"
+								directory="../kw_application/flycart/images/widget/"
+								repeat="no-repeat"
+								position="50% 50%"
+								default-img="{ src: 'Right-With-Shadow.png', width: 71, height: 56 }"
+								module="kw_flycart"
+								token="{{token}}">
+						</kw:custom-image>
+					</div>
+				</div>
+			</div>
+
+			<div class="field_separator"></div>
+
+			<div class="field select">
+				<div class="field-row">
+					<span class="label field-cell field-left">
+						<span>
+							<i class="tooltip help" kw:tooltips data-text="{{::locale.help_42 | sanitize}}"></i>{{::locale.position}}
+						</span>
+					</span>
+
+					<div class="field-cell field-right">
+						<select ng:model="tools.widget_count_position" ui-jq="select2" ui-options="{{selectOptions}}" select2-scrollbar>
+							<option value="static" ng:bind="::locale.static"></option>
+							<option value="relative" ng:bind="::locale.relative"></option>
+							<option value="absolute" ng:bind="::locale.absolute"></option>
+							<option value="fixed" ng:bind="::locale.fixed"></option>
+						</select>
+					</div>
+				</div>
+			</div>
+
+			<!-- -->
+			<div class="field inter numset">
+				<div class="field-row">
+					<span class="label field-cell field-left">
+						<span>
+							<i class="tooltip help" kw:tooltips data-text="{{::locale.help_43 | sanitize}}"></i>{{::locale.page_position}}
+						</span>
+					</span>
+
+					<div class="field-cell field-right">
+						<kw:number model="tools.widget_count_t" label="{{::locale.top}}"></kw:number>
+						<kw:number model="tools.widget_count_r" label="{{::locale.right}}"></kw:number>
+						<kw:number model="tools.widget_count_b" label="{{::locale.bottom}}"></kw:number>
+						<kw:number model="tools.widget_count_l" label="{{::locale.left}}"></kw:number>
+						<span class="right-label" ng:bind="::locale.px"></span>
+					</div>
+				</div>
+			</div>
+
+			<div class="field_separator"></div>
+
+			<div class="field textarea top-label">
+				<div class="field-row">
+					<span class="label field-cell field-left">
+						<span>
+							<i class="tooltip help" kw:tooltips data-text="{{::locale.help_44 | sanitize}}"></i>{{::locale.widget_content}}
+						</span>
+					</span>
+
+					<div class="field-cell field-right">
+						<div class="languages textarea-lang" ng:repeat="language in languages"
+						     ng:init="tools.widget_text[language.language_id] = tools.widget_text[language.language_id] ? tools.widget_text[language.language_id] : '[items]'">
+
+							<div class="textarea-desc" ng:if="$index === 0">
+								<span ng:click="appendText('[items]', language.language_id)" class="text-append">[<span>items</span>]</span>{{::locale.item_count}}<br />
+								<span ng:click="appendText('[name]', language.language_id)" class="text-append">[<span>name</span>]</span>{{::locale.item_names}}<br />
+								<span ng:click="appendText('[total]', language.language_id)" class="text-append">[<span>total</span>]</span>{{::locale.item_sum}}
+							</div>
+							<div class="textarea-desc" ng:if="$index > 0">
+								<span ng:click="appendText('[items]', language.language_id)" class="text-append">[<span>items</span>]</span>
+								<span ng:click="appendText('[name]', language.language_id)" class="text-append">[<span>name</span>]</span>
+								<span ng:click="appendText('[total]', language.language_id)" class="text-append">[<span>total</span>]</span>
+							</div>
+
+							<textarea ng:model="tools.widget_text[language.language_id]"></textarea>
+							<img class="lang-img" ng:src="view/image/flags/{{language.image}}" title="{{lang.name}}" alt class="lang-icon" />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="field numset">
+				<div class="field-row">
+					<span class="label field-cell field-left">
+						<span>
+							<i class="tooltip help" kw:tooltips data-text="{{::locale.help_45 | sanitize}}"></i>{{::locale.count_padding}}
+						</span>
+					</span>
+
+					<div class="field-cell field-right">
+						<kw:number model="tools.widget_count_posleft" label="{{::locale.x}}"></kw:number>
+						<kw:number model="tools.widget_count_postop" label="{{::locale.y}}"></kw:number>
+
+						<span class="drop-switcher" outside-click="dropSwitch['posval'] = false;">
+							<span class="drop-switcher-label" ng:click="dropSwitch['posval'] = true;">{{ tools.widget_count_posval }}</span>
+
+							<span class="drop-switcher-area if-hide" ng:if="dropSwitch['posval']">
+								<label ng:class="{ 'active': tools.widget_count_posval === 'px' }">
+									<input type="radio" ng:model="tools.widget_count_posval" value="px" ng:change="dropSwitch['posval'] = false;" />{{::locale.px}}
+								</label>
+								<label ng:class="{ 'active': tools.widget_count_posval === '%' }">
+									<input type="radio" ng:model="tools.widget_count_posval" value="%" ng:change="dropSwitch['posval'] = false;" />{{::locale.percent}}
+								</label>
+							</span>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="field color-size">
+				<div class="field-row">
+					<span class="label field-cell field-left">
+						<span>
+							<i class="tooltip help" kw:tooltips data-text="{{::locale.help_46 | sanitize}}"></i>{{::locale.text}}
+						</span>
+					</span>
+
+					<div class="field-cell field-right">
+						<kw:color model="tools.widget_count_color" default-value="rgba(0,0,0,1)"></kw:color>
+						<kw:number model="tools.widget_count_fontsize" min="0"></kw:number>
+						<span class="right-label" ng:bind="::locale.px"></span>
+					</div>
+				</div>
+			</div>
+
+			<div class="field color-switch">
+				<div class="field-row">
+					<span class="label field-cell field-left">
+						<span>
+							<i class="tooltip help" kw:tooltips data-text="{{::locale.help_47 | sanitize}}"></i>{{::locale.count_bg}}
+						</span>
+					</span>
+
+					<div class="field-cell field-right">
+						<kw:switcher on="{{::locale.text_enabled}}" off="{{::locale.text_disabled}}"
+						             model="tools.widget_count_bg_tools" default-value="true"></kw:switcher>
+
+						<kw:color model="tools.widget_count_bg" class="if-hide" default-value="rgba(255,255,255,1)" ng:if="tools.widget_count_bg_tools"></kw:color>
+					</div>
+				</div>
+			</div>
+
+			<div class="field numset if-hide" ng:if="tools.widget_count_bg_tools">
+				<div class="field-row">
+					<span class="label field-cell field-left">
+						<span>
+							<i class="tooltip help" kw:tooltips data-text="{{::locale.help_48 | sanitize}}"></i>{{::locale.count_in_padding}}
+						</span>
+					</span>
+
+					<div class="field-cell field-right">
+						<kw:number model="tools.widget_count_pt" min="0" label="{{::locale.top}}"></kw:number>
+						<kw:number model="tools.widget_count_pr" min="0" label="{{::locale.right}}"></kw:number>
+						<kw:number model="tools.widget_count_pb" min="0" label="{{::locale.bottom}}"></kw:number>
+						<kw:number model="tools.widget_count_pl" min="0" label="{{::locale.left}}"></kw:number>
+						<span class="right-label" ng:bind="::locale.px"></span>
+					</div>
+				</div>
+			</div>
+
+			<div class="field numset if-hide" ng:if="tools.widget_count_bg_tools">
+				<div class="field-row">
+					<span class="label field-cell field-left">
+						<span>
+							<i class="tooltip help" kw:tooltips data-text="{{::locale.help_49 | sanitize}}"></i>{{::locale.radius}}
+						</span>
+					</span>
+
+					<div class="field-cell field-right">
+						<kw:number model="tools.widget_count_rt" min="0" label="{{::locale.top_left}}"></kw:number>
+						<kw:number model="tools.widget_count_rr" min="0" label="{{::locale.top_right}}"></kw:number>
+						<kw:number model="tools.widget_count_rb" min="0" label="{{::locale.btm_right}}"></kw:number>
+						<kw:number model="tools.widget_count_rl" min="0" label="{{::locale.btm_left}}"></kw:number>
+
+						<span class="drop-switcher" outside-click="dropSwitch['countval'] = false;">
+							<span class="drop-switcher-label" ng:click="dropSwitch['countval'] = true;">{{ tools.widget_count_val }}</span>
+							<span class="drop-switcher-area if-hide" ng:if="dropSwitch['countval']">
+								<label ng:class="{ 'active': tools.widget_count_val === 'px' }">
+									<input type="radio" ng:model="tools.widget_count_val" value="px" ng:change="dropSwitch['countval'] = false;" />{{::locale.px}}
+								</label>
+								<label ng:class="{ 'active': tools.widget_count_val === '%' }">
+									<input type="radio" ng:model="tools.widget_count_val" value="%" ng:change="dropSwitch['countval'] = false;" />{{::locale.percent}}
+								</label>
+							</span>
+						</span>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
