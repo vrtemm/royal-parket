@@ -12,6 +12,8 @@ class ModelLocalisationTaxClass extends Model {
 		}
 
 		$this->cache->delete('tax_class');
+		
+		return $tax_class_id;
 	}
 
 	public function editTaxClass($tax_class_id, $data) {
@@ -90,7 +92,7 @@ class ModelLocalisationTaxClass extends Model {
 	}
 
 	public function getTaxRules($tax_class_id) {
-		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "tax_rule WHERE tax_class_id = '" . (int)$tax_class_id . "'");
+		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "tax_rule WHERE tax_class_id = '" . (int)$tax_class_id . "' ORDER BY priority ASC");
 
 		return $query->rows;
 	}

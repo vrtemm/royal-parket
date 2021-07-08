@@ -1,30 +1,8 @@
 <?php
 class ControllerCommonFooter extends Controller {
 	public function index() {
-		if(isset($this->request->get['ajax'])) {
-			return;
-		}
 		$this->load->language('common/footer');
 
-		$data['text_information'] = $this->language->get('text_information');
-		$data['text_service'] = $this->language->get('text_service');
-		$data['text_extra'] = $this->language->get('text_extra');
-		$data['text_contact'] = $this->language->get('text_contact');
-		$data['text_return'] = $this->language->get('text_return');
-		$data['text_sitemap'] = $this->language->get('text_sitemap');
-		$data['text_manufacturer'] = $this->language->get('text_manufacturer');
-		$data['text_voucher'] = $this->language->get('text_voucher');
-		$data['text_affiliate'] = $this->language->get('text_affiliate');
-		$data['text_special'] = $this->language->get('text_special');
-		$data['text_account'] = $this->language->get('text_account');
-		$data['text_order'] = $this->language->get('text_order');
-		$data['text_wishlist'] = $this->language->get('text_wishlist');
-		$data['text_newsletter'] = $this->language->get('text_newsletter');
-if (is_file(DIR_IMAGE . $this->config->get('config_logo'))) {
-			$data['logo'] = $this->config->get('config_logo');
-		} else {
-			$data['logo'] = '';
-		}
 		$this->load->model('catalog/information');
 
 		$data['informations'] = array();
@@ -39,18 +17,17 @@ if (is_file(DIR_IMAGE . $this->config->get('config_logo'))) {
 		}
 
 		$data['contact'] = $this->url->link('information/contact');
-		$data['return'] = $this->url->link('account/return/add', '', 'SSL');
+		$data['return'] = $this->url->link('account/return/add', '', true);
 		$data['sitemap'] = $this->url->link('information/sitemap');
+		$data['tracking'] = $this->url->link('information/tracking');
 		$data['manufacturer'] = $this->url->link('product/manufacturer');
-		$data['voucher'] = $this->url->link('account/voucher', '', 'SSL');
-		$data['affiliate'] = $this->url->link('affiliate/account', '', 'SSL');
+		$data['voucher'] = $this->url->link('account/voucher', '', true);
+		$data['affiliate'] = $this->url->link('affiliate/login', '', true);
 		$data['special'] = $this->url->link('product/special');
-		$data['account'] = $this->url->link('account/account', '', 'SSL');
-		$data['order'] = $this->url->link('account/order', '', 'SSL');
-		$data['wishlist'] = $this->url->link('account/wishlist', '', 'SSL');
-		$data['newsletter'] = $this->url->link('account/newsletter', '', 'SSL');
-$data['name'] = $this->config->get('config_name');
-$data['home'] = $this->url->link('common/home');
+		$data['account'] = $this->url->link('account/account', '', true);
+		$data['order'] = $this->url->link('account/order', '', true);
+		$data['wishlist'] = $this->url->link('account/wishlist', '', true);
+		$data['newsletter'] = $this->url->link('account/newsletter', '', true);
 
 		$data['powered'] = sprintf($this->language->get('text_powered'), $this->config->get('config_name'), date('Y', time()));
 
@@ -65,7 +42,7 @@ $data['home'] = $this->url->link('common/home');
 			}
 
 			if (isset($this->request->server['HTTP_HOST']) && isset($this->request->server['REQUEST_URI'])) {
-				$url = 'http://' . $this->request->server['HTTP_HOST'] . $this->request->server['REQUEST_URI'];
+				$url = ($this->request->server['HTTPS'] ? 'https://' : 'http://') . $this->request->server['HTTP_HOST'] . $this->request->server['REQUEST_URI'];
 			} else {
 				$url = '';
 			}
@@ -76,13 +53,12 @@ $data['home'] = $this->url->link('common/home');
 				$referer = '';
 			}
 
-			$this->model_tool_online->whosonline($ip, $this->customer->getId(), $url, $referer);
+			$this->model_tool_online->addOnline($ip, $this->customer->getId(), $url, $referer);
 		}
 
-		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/common/footer.tpl')) {
-			return $this->load->view($this->config->get('config_template') . '/template/common/footer.tpl', $data);
-		} else {
-			return $this->load->view('default/template/common/footer.tpl', $data);
-		}
+		$data['scripts'] = $this->document->getScripts('footer');
+		$data['styles'] = $this->document->getStyles('footer');
+		
+		return $this->load->view('common/footer', $data);
 	}
 }

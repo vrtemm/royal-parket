@@ -1,27 +1,14 @@
 <?php
 class ModelToolBackup extends Model {
-	public function restore($sql) {
-		foreach (explode(";\n", $sql) as $sql) {
-			$sql = trim($sql);
-
-			if ($sql) {
-				$this->db->query($sql);
-			}
-		}
-
-		$this->cache->delete('*');
-	}
-
 	public function getTables() {
 		$table_data = array();
 
 		$query = $this->db->query("SHOW TABLES FROM `" . DB_DATABASE . "`");
 
 		foreach ($query->rows as $result) {
-			if (utf8_substr($result['Tables_in_' . DB_DATABASE], 0, strlen(DB_PREFIX)) == DB_PREFIX) {
-				if (isset($result['Tables_in_' . DB_DATABASE])) {
-					$table_data[] = $result['Tables_in_' . DB_DATABASE];
-				}
+			$table = reset($result);
+			if ($table && utf8_substr($table, 0, strlen(DB_PREFIX)) == DB_PREFIX) {
+				$table_data[] = $table;
 			}
 		}
 
@@ -29,8 +16,6 @@ class ModelToolBackup extends Model {
 	}
 
 	public function backup($tables) {
-		$this->event->trigger('pre.admin.backup', $tables);
-
 		$output = '';
 
 		foreach ($tables as $table) {
@@ -76,8 +61,6 @@ class ModelToolBackup extends Model {
 				$output .= "\n\n";
 			}
 		}
-
-		$this->event->trigger('post.admin.backup');
 
 		return $output;
 	}
