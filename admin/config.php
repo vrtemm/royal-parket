@@ -26,6 +26,6 @@ define('DB_DRIVER', 'mysqli');
 define('DB_HOSTNAME', 'localhost');
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', 'root');
-define('DB_DATABASE', 'royalpar_pixod');
+define('DB_DATABASE', 'royalpar_pixod_litextension');
 define('DB_PORT', '8889');
 define('DB_PREFIX', 'oc_');
