@@ -4356,3 +4356,293 @@
 2021-07-08 8:39:17 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
 2021-07-08 8:39:17 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
 2021-07-08 8:39:17 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:28:43 - PHP Notice:  unserialize(): Error at offset 0 of 10651 bytes in /Applications/MAMP/htdocs/royal-parket/system/library/user.php on line 24
+2021-07-08 9:28:44 - PHP Notice:  unserialize(): Error at offset 0 of 1109 bytes in /Applications/MAMP/htdocs/royal-parket/catalog/model/setting/setting.php on line 12
+2021-07-08 9:30:17 - PHP Notice:  Undefined variable: permissions in /Applications/MAMP/htdocs/royal-parket/system/library/user.php on line 26
+2021-07-08 9:30:17 - PHP Notice:  unserialize(): Error at offset 0 of 1109 bytes in /Applications/MAMP/htdocs/royal-parket/catalog/model/setting/setting.php on line 12
+2021-07-08 9:30:29 - PHP Notice:  Undefined variable: permissions in /Applications/MAMP/htdocs/royal-parket/system/library/user.php on line 26
+2021-07-08 9:31:01 - PHP Notice:  unserialize(): Error at offset 0 of 10651 bytes in /Applications/MAMP/htdocs/royal-parket/system/library/user.php on line 24
+2021-07-08 9:31:01 - PHP Notice:  unserialize(): Error at offset 0 of 1109 bytes in /Applications/MAMP/htdocs/royal-parket/catalog/model/setting/setting.php on line 12
+2021-07-08 9:31:03 - PHP Notice:  unserialize(): Error at offset 0 of 10651 bytes in /Applications/MAMP/htdocs/royal-parket/system/library/user.php on line 24
+2021-07-08 9:31:03 - PHP Notice:  unserialize(): Error at offset 0 of 1109 bytes in /Applications/MAMP/htdocs/royal-parket/catalog/model/setting/setting.php on line 12
+2021-07-08 9:32:32 - PHP Notice:  unserialize(): Error at offset 0 of 10651 bytes in /Applications/MAMP/htdocs/royal-parket/system/library/user.php on line 24
+2021-07-08 9:32:32 - PHP Notice:  unserialize(): Error at offset 0 of 1109 bytes in /Applications/MAMP/htdocs/royal-parket/catalog/model/setting/setting.php on line 12
+2021-07-08 9:32:33 - PHP Notice:  unserialize(): Error at offset 0 of 10651 bytes in /Applications/MAMP/htdocs/royal-parket/system/library/user.php on line 24
+2021-07-08 9:32:33 - PHP Notice:  unserialize(): Error at offset 0 of 1109 bytes in /Applications/MAMP/htdocs/royal-parket/catalog/model/setting/setting.php on line 12
+2021-07-08 9:32:34 - PHP Notice:  unserialize(): Error at offset 0 of 10651 bytes in /Applications/MAMP/htdocs/royal-parket/system/library/user.php on line 24
+2021-07-08 9:32:34 - PHP Notice:  unserialize(): Error at offset 0 of 1109 bytes in /Applications/MAMP/htdocs/royal-parket/catalog/model/setting/setting.php on line 12
+2021-07-08 9:32:37 - PHP Notice:  unserialize(): Error at offset 0 of 1109 bytes in /Applications/MAMP/htdocs/royal-parket/catalog/model/setting/setting.php on line 12
+2021-07-08 9:32:43 - PHP Notice:  unserialize(): Error at offset 0 of 10651 bytes in /Applications/MAMP/htdocs/royal-parket/system/library/user.php on line 24
+2021-07-08 9:32:43 - PHP Notice:  unserialize(): Error at offset 0 of 1109 bytes in /Applications/MAMP/htdocs/royal-parket/catalog/model/setting/setting.php on line 12
+2021-07-08 9:32:44 - PHP Notice:  unserialize(): Error at offset 0 of 10651 bytes in /Applications/MAMP/htdocs/royal-parket/system/library/user.php on line 24
+2021-07-08 9:32:44 - PHP Notice:  unserialize(): Error at offset 0 of 1109 bytes in /Applications/MAMP/htdocs/royal-parket/catalog/model/setting/setting.php on line 12
+2021-07-08 9:32:45 - PHP Notice:  unserialize(): Error at offset 0 of 10651 bytes in /Applications/MAMP/htdocs/royal-parket/system/library/user.php on line 24
+2021-07-08 9:32:45 - PHP Notice:  unserialize(): Error at offset 0 of 1109 bytes in /Applications/MAMP/htdocs/royal-parket/catalog/model/setting/setting.php on line 12
+2021-07-08 9:32:45 - PHP Notice:  unserialize(): Error at offset 0 of 10651 bytes in /Applications/MAMP/htdocs/royal-parket/system/library/user.php on line 24
+2021-07-08 9:32:45 - PHP Notice:  unserialize(): Error at offset 0 of 1109 bytes in /Applications/MAMP/htdocs/royal-parket/catalog/model/setting/setting.php on line 12
+2021-07-08 9:32:46 - PHP Notice:  unserialize(): Error at offset 0 of 10651 bytes in /Applications/MAMP/htdocs/royal-parket/system/library/user.php on line 24
+2021-07-08 9:32:46 - PHP Notice:  unserialize(): Error at offset 0 of 1109 bytes in /Applications/MAMP/htdocs/royal-parket/catalog/model/setting/setting.php on line 12
+2021-07-08 9:33:07 - PHP Notice:  unserialize(): Error at offset 0 of 10651 bytes in /Applications/MAMP/htdocs/royal-parket/system/library/user.php on line 24
+2021-07-08 9:33:07 - PHP Notice:  unserialize(): Error at offset 0 of 1109 bytes in /Applications/MAMP/htdocs/royal-parket/catalog/model/setting/setting.php on line 12
+2021-07-08 9:33:30 - PHP Notice:  unserialize(): Error at offset 0 of 10651 bytes in /Applications/MAMP/htdocs/royal-parket/system/library/user.php on line 24
+2021-07-08 9:33:30 - PHP Notice:  unserialize(): Error at offset 0 of 1109 bytes in /Applications/MAMP/htdocs/royal-parket/catalog/model/setting/setting.php on line 12
+2021-07-08 9:33:30 - PHP Notice:  unserialize(): Error at offset 0 of 10651 bytes in /Applications/MAMP/htdocs/royal-parket/system/library/user.php on line 24
+2021-07-08 9:33:30 - PHP Notice:  unserialize(): Error at offset 0 of 1109 bytes in /Applications/MAMP/htdocs/royal-parket/catalog/model/setting/setting.php on line 12
+2021-07-08 9:33:31 - PHP Notice:  unserialize(): Error at offset 0 of 1109 bytes in /Applications/MAMP/htdocs/royal-parket/catalog/model/setting/setting.php on line 12
+2021-07-08 9:33:32 - PHP Notice:  unserialize(): Error at offset 0 of 1109 bytes in /Applications/MAMP/htdocs/royal-parket/catalog/model/setting/setting.php on line 12
+2021-07-08 9:36:44 - PHP Notice:  unserialize(): Error at offset 0 of 1109 bytes in /Applications/MAMP/htdocs/royal-parket/catalog/model/setting/setting.php on line 12
+2021-07-08 9:36:45 - PHP Notice:  unserialize(): Error at offset 0 of 1109 bytes in /Applications/MAMP/htdocs/royal-parket/catalog/model/setting/setting.php on line 12
+2021-07-08 9:36:46 - PHP Notice:  unserialize(): Error at offset 0 of 1109 bytes in /Applications/MAMP/htdocs/royal-parket/catalog/model/setting/setting.php on line 12
+2021-07-08 9:36:49 - PHP Notice:  unserialize(): Error at offset 0 of 1109 bytes in /Applications/MAMP/htdocs/royal-parket/catalog/model/setting/setting.php on line 12
+2021-07-08 9:36:50 - PHP Notice:  unserialize(): Error at offset 0 of 1109 bytes in /Applications/MAMP/htdocs/royal-parket/catalog/model/setting/setting.php on line 12
+2021-07-08 9:36:50 - PHP Notice:  unserialize(): Error at offset 0 of 1109 bytes in /Applications/MAMP/htdocs/royal-parket/catalog/model/setting/setting.php on line 12
+2021-07-08 9:36:51 - PHP Notice:  unserialize(): Error at offset 0 of 1109 bytes in /Applications/MAMP/htdocs/royal-parket/catalog/model/setting/setting.php on line 12
+2021-07-08 9:36:52 - PHP Notice:  unserialize(): Error at offset 0 of 1109 bytes in /Applications/MAMP/htdocs/royal-parket/catalog/model/setting/setting.php on line 12
+2021-07-08 9:36:52 - PHP Notice:  unserialize(): Error at offset 0 of 1109 bytes in /Applications/MAMP/htdocs/royal-parket/catalog/model/setting/setting.php on line 12
+2021-07-08 9:36:53 - PHP Notice:  unserialize(): Error at offset 0 of 1109 bytes in /Applications/MAMP/htdocs/royal-parket/catalog/model/setting/setting.php on line 12
+2021-07-08 9:36:53 - PHP Notice:  unserialize(): Error at offset 0 of 1109 bytes in /Applications/MAMP/htdocs/royal-parket/catalog/model/setting/setting.php on line 12
+2021-07-08 9:36:53 - PHP Notice:  unserialize(): Error at offset 0 of 1109 bytes in /Applications/MAMP/htdocs/royal-parket/catalog/model/setting/setting.php on line 12
+2021-07-08 9:36:53 - PHP Notice:  unserialize(): Error at offset 0 of 1109 bytes in /Applications/MAMP/htdocs/royal-parket/catalog/model/setting/setting.php on line 12
+2021-07-08 9:36:53 - PHP Notice:  unserialize(): Error at offset 0 of 1109 bytes in /Applications/MAMP/htdocs/royal-parket/catalog/model/setting/setting.php on line 12
+2021-07-08 9:36:53 - PHP Notice:  unserialize(): Error at offset 0 of 1109 bytes in /Applications/MAMP/htdocs/royal-parket/catalog/model/setting/setting.php on line 12
+2021-07-08 9:37:12 - PHP Notice:  unserialize(): Error at offset 0 of 1109 bytes in /Applications/MAMP/htdocs/royal-parket/catalog/model/setting/setting.php on line 12
+2021-07-08 9:40:59 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:40:59 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:40:59 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:40:59 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:40:59 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:40:59 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:40:59 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:40:59 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:40:59 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:40:59 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:40:59 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:40:59 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:40:59 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:40:59 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:40:59 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:40:59 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:40:59 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:40:59 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:40:59 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:40:59 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:40:59 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:40:59 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:40:59 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:40:59 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:40:59 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:40:59 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:40:59 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:40:59 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:40:59 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:40:59 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:40:59 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:40:59 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:40:59 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:40:59 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:40:59 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:40:59 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:41:01 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:41:01 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:41:01 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:41:02 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:41:02 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:41:02 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:41:03 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:41:03 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:41:03 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:41:04 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:41:04 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:41:04 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:41:04 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:41:04 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:41:04 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:41:05 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:41:05 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:41:05 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:41:06 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:41:06 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:41:06 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:41:06 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:41:06 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:41:06 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:41:07 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:41:07 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:41:07 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:41:08 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:41:08 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:41:08 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:41:08 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:41:08 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:41:08 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:41:09 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:41:09 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:41:09 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:41:09 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:41:09 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:41:09 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:41:09 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:41:09 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:41:09 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:41:10 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:41:10 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:41:10 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:41:10 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:41:10 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:41:10 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:41:11 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:41:11 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:41:11 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:41:12 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:41:12 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:41:12 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:41:12 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:41:12 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:41:12 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:41:12 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:41:12 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:41:12 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:41:12 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:41:12 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:41:12 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:41:12 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:41:12 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:41:12 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:41:12 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:41:12 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:41:12 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:41:12 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:41:12 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:41:12 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:41:12 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:41:12 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:41:12 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:41:12 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:41:12 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:41:12 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:41:12 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:41:12 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:41:12 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:41:12 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:41:12 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:41:12 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:44:10 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:44:10 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:44:10 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:44:10 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:44:10 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:44:10 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:44:10 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:44:10 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:44:10 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:44:10 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:44:10 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:44:10 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:44:10 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:44:10 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:44:10 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:44:10 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:44:10 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:44:10 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:44:10 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:44:10 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:44:10 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:44:10 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:44:10 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:44:10 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:44:10 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:44:10 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:44:10 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:44:10 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:44:10 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: cr in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1051
+2021-07-08 9:44:10 - PHP Notice:  Undefined variable: sale in /Applications/MAMP/htdocs/royal-parket/system/modification/catalog/model/catalog/product.php on line 1105
+2021-07-08 9:44:10 - PHP Warning:  number_format() expects parameter 1 to be float, string given in /Applications/MAMP/htdocs/royal-parket/system/library/length.php on line 43
+2021-07-08 9:44:10 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:44:10 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:44:10 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:44:10 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:44:10 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:44:10 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:44:10 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:44:10 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:44:10 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:44:10 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:44:10 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:44:10 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:44:10 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:44:10 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:44:10 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:44:10 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:44:10 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:44:10 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:44:10 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:44:10 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:44:10 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:44:10 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:44:10 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:44:10 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:44:10 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:44:10 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:44:10 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:44:10 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:44:10 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
+2021-07-08 9:44:10 - PHP Notice:  A non well formed numeric value encountered in /Applications/MAMP/htdocs/royal-parket/catalog/view/theme/theme535/template/common/item.tpl on line 67
