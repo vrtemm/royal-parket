@@ -1,4 +1,6 @@
 <?php
+ini_set("display_errors",1);
+error_reporting(E_ALL);
 // Version
 define('VERSION', '2.0.1.0');
 
