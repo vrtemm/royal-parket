@@ -1,0 +1,245 @@
+﻿@media (max-width: 1199px) {
+    .carusel {
+        height: 600px;
+    }
+
+    .slider_shadow {
+        height: 600px;
+    }
+
+    .carusel img {
+        zoom: 0.7;
+    }
+
+    h1.title {
+        font-size: 50px;
+    }
+
+    .slider-text span {
+        font-size: 24px;
+        line-height: 60px;
+    }
+
+    .slider-text h1 span {
+        font-size: 30px;
+        vertical-align: top;
+        line-height: 20px;
+    }
+}
+@media (max-width: 991px) {
+    h1 {
+        font-size: 23px;
+    }
+    .utp_title p {
+        font-size: 16px;
+    }
+    .utp_text p {
+        font-size: 13px;
+        margin-top: 10px;
+        line-height: 20px;
+    }
+    .comments {
+        flex-wrap: wrap;
+    }
+    .gty-block .btn-block {
+        flex-wrap: wrap;
+    }
+    .in_stock span {
+        margin-bottom: 10px;
+        margin-right: 0;
+        display: inline-block;
+    }
+    .manufacturers {
+        flex-wrap: wrap;
+        justify-content:space-around;
+    }
+    .manufacturers div {
+        margin:10px;
+    }
+    .carusel {
+        height: 400px;
+    }
+
+    .slider_shadow {
+        height: 400px;
+    }
+
+    .carusel img {
+        zoom: 0.5;
+    }
+    .owl-pagination {
+        bottom: 160px;
+    }
+    .slider-text {
+        top: 70px;
+    }
+
+    h1.title {
+        font-size: 30px;
+    }
+
+    .slider-text span {
+        font-size: 18px;
+        line-height: 60px;
+    }
+
+    .slider-text h1 span {
+        font-size: 20px;
+        vertical-align: top;
+        line-height: 20px;
+    }
+}
+@media (max-width: 767px) {
+    .sort_block ul {
+        font-size: 14px;
+        justify-content: center;
+    }
+    .product-thumb {
+        max-width: 430px;
+        margin: 0 auto;
+        margin-bottom: 25px;
+    }
+    .in_stock span {
+        margin-right: 20px;
+        margin-bottom:0;
+    }
+    .text-description {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+    .baner .upt_title {
+        margin-bottom: 105px;
+    }
+    .baner_text {
+        padding: 10px 0px;
+        margin-bottom: 40px;
+    }
+    .product_list > a{
+        display:none;
+    }
+}
+@media (max-width: 640px) {
+    .sort_block ul {
+        font-size: 10px;
+    }
+    .baner {
+        margin-top: 100px;
+    }
+    .see_next {
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        bottom: 30px;
+        width: 100%;
+        justify-content: center;
+    }
+    .owl-pagination {
+        bottom: 60px;
+    }
+    .slider-text {
+        top: 90px;
+        width: 100%;
+        left: 0;
+        right: 0;
+    }
+        .slider-text span {
+            font-size: 16px;
+            line-height: normal;
+        }
+    h1.title {
+        font-size: 26px;
+    }
+    .slider .owl-item .item {
+        padding: 20px;
+        position: relative;
+    }
+    #slideshow0 .owl-controls, #slideshow0 .owl-controls > .owl-buttons {
+        display:none;
+    }
+}
+@media (max-width: 480px) {
+    .sort_block ul {
+        flex-wrap: wrap;
+        font-size: 14px;
+    }
+    .sort_block ul li + li:before {
+        margin: 0 10px;
+    }
+    .manufacturers div {
+        margin: 20px 10px;
+    }
+    .baner .upt_title {
+        margin-bottom: 65px;
+    }
+    .baner_text {
+        margin-bottom: 60px;
+    }
+    h1.title {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .slider-text h1 span {
+        font-size: 10px;
+        line-height: 10px;
+    }
+    .slider-text span {
+        font-size: 12px;
+        line-height: normal;
+    }
+    .owl-pagination {
+        bottom: 30px;
+        left:20px
+    }
+    .owl-page span{
+        width:10px;
+        height:10px;
+    }
+    h1.title {
+        margin-bottom: 0px;
+    }
+    .slider-text span {
+        font-size: 9px;
+    }
+    .see_next {
+        font-size: 8px;
+    }
+    .product_block {
+        margin-bottom: 0px;
+    }
+    .manufacturers {
+        margin-bottom: 50px;
+    }
+    .text-description {
+        margin-bottom: 50px;
+    }
+}
+@media (max-width: 340px) {
+    .sort_block ul {
+        flex-wrap: nowrap; 
+        flex-direction: column;
+    }
+        .sort_block ul li:before {
+            content: "";
+            width: 1px;
+            height: 28px;
+            display: inline-block;
+            background-color: #f0f0f0;
+            margin: 0 10px;
+        }
+    .in_stock span {
+        margin-bottom: 10px;
+        margin-right: 0;
+        display: inline-block;
+    }
+    h1 {
+        text-align: center;
+    }
+    .baner {
+        height: 750px;
+    }
+    .slider-text {
+        top: 80px;
+    }
+}

@@ -32,3 +32,37 @@
 2021-07-09 12:21:47 - PHP Warning:  in_array() expects parameter 2 to be array, string given in /Applications/MAMP/htdocs/royal-parket/admin/view/template/setting/setting.tpl on line 1150
 2021-07-09 12:21:47 - PHP Warning:  in_array() expects parameter 2 to be array, string given in /Applications/MAMP/htdocs/royal-parket/admin/view/template/setting/setting.tpl on line 1150
 2021-07-09 12:21:47 - PHP Notice:  Use of undefined constant DIR_CATALOG - assumed 'DIR_CATALOG' in /Applications/MAMP/htdocs/royal-parket/admin/controller/setting/setting.php on line 1254
+2021-07-09 12:23:51 - PHP Warning:  in_array() expects parameter 2 to be array, string given in /Applications/MAMP/htdocs/royal-parket/admin/view/template/setting/setting.tpl on line 1150
+2021-07-09 12:23:51 - PHP Warning:  in_array() expects parameter 2 to be array, string given in /Applications/MAMP/htdocs/royal-parket/admin/view/template/setting/setting.tpl on line 1150
+2021-07-09 12:23:51 - PHP Warning:  in_array() expects parameter 2 to be array, string given in /Applications/MAMP/htdocs/royal-parket/admin/view/template/setting/setting.tpl on line 1150
+2021-07-09 12:23:51 - PHP Warning:  in_array() expects parameter 2 to be array, string given in /Applications/MAMP/htdocs/royal-parket/admin/view/template/setting/setting.tpl on line 1150
+2021-07-09 12:23:51 - PHP Notice:  Use of undefined constant DIR_CATALOG - assumed 'DIR_CATALOG' in /Applications/MAMP/htdocs/royal-parket/admin/controller/setting/setting.php on line 1254
+2021-07-09 12:27:37 - PHP Warning:  in_array() expects parameter 2 to be array, string given in /Applications/MAMP/htdocs/royal-parket/admin/view/template/setting/setting.tpl on line 1150
+2021-07-09 12:27:37 - PHP Warning:  in_array() expects parameter 2 to be array, string given in /Applications/MAMP/htdocs/royal-parket/admin/view/template/setting/setting.tpl on line 1150
+2021-07-09 12:27:37 - PHP Warning:  in_array() expects parameter 2 to be array, string given in /Applications/MAMP/htdocs/royal-parket/admin/view/template/setting/setting.tpl on line 1150
+2021-07-09 12:27:37 - PHP Warning:  in_array() expects parameter 2 to be array, string given in /Applications/MAMP/htdocs/royal-parket/admin/view/template/setting/setting.tpl on line 1150
+2021-07-09 12:27:38 - PHP Notice:  Use of undefined constant DIR_CATALOG - assumed 'DIR_CATALOG' in /Applications/MAMP/htdocs/royal-parket/admin/controller/setting/setting.php on line 1254
+2021-07-09 12:27:46 - PHP Warning:  in_array() expects parameter 2 to be array, string given in /Applications/MAMP/htdocs/royal-parket/admin/view/template/setting/setting.tpl on line 1150
+2021-07-09 12:27:46 - PHP Warning:  in_array() expects parameter 2 to be array, string given in /Applications/MAMP/htdocs/royal-parket/admin/view/template/setting/setting.tpl on line 1150
+2021-07-09 12:27:46 - PHP Warning:  in_array() expects parameter 2 to be array, string given in /Applications/MAMP/htdocs/royal-parket/admin/view/template/setting/setting.tpl on line 1150
+2021-07-09 12:27:46 - PHP Warning:  in_array() expects parameter 2 to be array, string given in /Applications/MAMP/htdocs/royal-parket/admin/view/template/setting/setting.tpl on line 1150
+2021-07-09 12:27:47 - PHP Notice:  Use of undefined constant DIR_CATALOG - assumed 'DIR_CATALOG' in /Applications/MAMP/htdocs/royal-parket/admin/controller/setting/setting.php on line 1254
+2021-07-09 12:28:02 - PHP Warning:  in_array() expects parameter 2 to be array, string given in /Applications/MAMP/htdocs/royal-parket/admin/view/template/setting/setting.tpl on line 1150
+2021-07-09 12:28:02 - PHP Warning:  in_array() expects parameter 2 to be array, string given in /Applications/MAMP/htdocs/royal-parket/admin/view/template/setting/setting.tpl on line 1150
+2021-07-09 12:28:02 - PHP Warning:  in_array() expects parameter 2 to be array, string given in /Applications/MAMP/htdocs/royal-parket/admin/view/template/setting/setting.tpl on line 1150
+2021-07-09 12:28:02 - PHP Warning:  in_array() expects parameter 2 to be array, string given in /Applications/MAMP/htdocs/royal-parket/admin/view/template/setting/setting.tpl on line 1150
+2021-07-09 12:28:02 - PHP Notice:  Use of undefined constant DIR_CATALOG - assumed 'DIR_CATALOG' in /Applications/MAMP/htdocs/royal-parket/admin/controller/setting/setting.php on line 1254
+2021-07-09 12:28:05 - PHP Warning:  in_array() expects parameter 2 to be array, string given in /Applications/MAMP/htdocs/royal-parket/admin/view/template/setting/setting.tpl on line 1150
+2021-07-09 12:28:05 - PHP Warning:  in_array() expects parameter 2 to be array, string given in /Applications/MAMP/htdocs/royal-parket/admin/view/template/setting/setting.tpl on line 1150
+2021-07-09 12:28:05 - PHP Warning:  in_array() expects parameter 2 to be array, string given in /Applications/MAMP/htdocs/royal-parket/admin/view/template/setting/setting.tpl on line 1150
+2021-07-09 12:28:05 - PHP Warning:  in_array() expects parameter 2 to be array, string given in /Applications/MAMP/htdocs/royal-parket/admin/view/template/setting/setting.tpl on line 1150
+2021-07-09 12:28:09 - PHP Warning:  in_array() expects parameter 2 to be array, string given in /Applications/MAMP/htdocs/royal-parket/admin/view/template/setting/setting.tpl on line 1150
+2021-07-09 12:28:09 - PHP Warning:  in_array() expects parameter 2 to be array, string given in /Applications/MAMP/htdocs/royal-parket/admin/view/template/setting/setting.tpl on line 1150
+2021-07-09 12:28:09 - PHP Warning:  in_array() expects parameter 2 to be array, string given in /Applications/MAMP/htdocs/royal-parket/admin/view/template/setting/setting.tpl on line 1150
+2021-07-09 12:28:09 - PHP Warning:  in_array() expects parameter 2 to be array, string given in /Applications/MAMP/htdocs/royal-parket/admin/view/template/setting/setting.tpl on line 1150
+2021-07-09 12:28:09 - PHP Notice:  Use of undefined constant DIR_CATALOG - assumed 'DIR_CATALOG' in /Applications/MAMP/htdocs/royal-parket/admin/controller/setting/setting.php on line 1254
+2021-07-09 12:28:15 - PHP Warning:  in_array() expects parameter 2 to be array, string given in /Applications/MAMP/htdocs/royal-parket/admin/view/template/setting/setting.tpl on line 1150
+2021-07-09 12:28:15 - PHP Warning:  in_array() expects parameter 2 to be array, string given in /Applications/MAMP/htdocs/royal-parket/admin/view/template/setting/setting.tpl on line 1150
+2021-07-09 12:28:15 - PHP Warning:  in_array() expects parameter 2 to be array, string given in /Applications/MAMP/htdocs/royal-parket/admin/view/template/setting/setting.tpl on line 1150
+2021-07-09 12:28:15 - PHP Warning:  in_array() expects parameter 2 to be array, string given in /Applications/MAMP/htdocs/royal-parket/admin/view/template/setting/setting.tpl on line 1150
+2021-07-09 12:28:15 - PHP Notice:  Use of undefined constant DIR_CATALOG - assumed 'DIR_CATALOG' in /Applications/MAMP/htdocs/royal-parket/admin/controller/setting/setting.php on line 1254

@@ -1,0 +1,207 @@
+/*=Font size */
+.ocfilter-option .option-name,
+.ocfilter-option .option-values,
+.ocfilter-option .option-description,
+.ocfilter-option .fields-price
+{
+	font-size: 12px;
+}
+
+.ocfilter a,
+.ocfilter a:hover,
+.ocfilter a:active{background: none; border: none; padding: 0; text-shadow: none;}
+
+    .ocfilter-option .option-name{
+			cursor: pointer;
+			font-size: 14px;
+			color: #3367a1;
+			padding: 15px 20px 10px 20px;
+			border: none;
+			font-weight: bold;
+		}
+		.ocfilter-option .option-values{
+overflow: visible;
+    padding: 5px 20px 15px;
+    border-bottom: 1px solid #f5f5f5;
+			}
+			.ocfilter-option .option-values.option-price-values {
+			padding: 5px 0 20px 0;
+				}
+			.ocfilter-option:last-child .option-values {
+    border: none;
+}
+    .list-group-item{overflow: visible!important;}
+    .ocfilter-option .option-values .dropdown-menu{width: 100%;}
+    .ocfilter-option .option-values .dropdown-menu > li{
+      padding: 10px;
+    }
+
+      .ocfilter-option .color{border-radius: 3px 3px 3px 3px; float: left; height: 19px; margin: 1px -16px 0 -3px; width: 19px;}
+      .ocfilter-option .image{background-repeat: no-repeat; background-position: 0 0; float: left; height: 19px; margin: 1px -16px 0 -3px; position: relative; width: 19px; z-index: 10;}
+
+      .ocfilter-option label{       cursor: pointer;
+    display: block;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1.6;
+    padding: 0px 0;}
+	.ocfilter-option label.selected a {
+    font-weight: bold;
+}
+      .ocfilter-option label input{display: inline-block; margin: 0 5px 0 0; vertical-align: top;}
+      .ocfilter-option label small{background-color: #DBEAF9; color: #0E6A93; font-weight: 200; font-size: 10px; margin-left: 5px;}
+
+			.ocfilter-option label.disabled{color: #999999;}
+      .ocfilter-option label.disabled small{background-color: #EFEFEF; color: #999999;}
+
+			.ocfilter-option label a{color: #727272; text-decoration: none;}
+      .ocfilter-option label.selected {color: #E56101;}
+      .ocfilter-option label.selected small{display: none;}
+
+    /*=Selected Options */
+    .selected-options {color: #333333; padding: 0;}
+    .selected-options .ocfilter-option{background-color: #F8F8F8; font-size: 10px; padding: 4px 5px;}
+
+    /*=Price filtering */
+		#ocfilter-price .option-values{padding: 10px 10px 5px;}
+		.trackbar, .trackbar .left-block, .trackbar .right-block{height: 4px;}
+
+    .popover-content .form-inline{white-space: nowrap;}
+    .popover-content .form-inline .form-group{display: inline-block; margin-bottom: 0; vertical-align: middle;}
+
+		.scale{    margin-bottom: 35px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 10px;}
+	.box-title {
+    margin-left: 17px;
+}
+
+	  .trackbar{background-color: #41AA35; margin:0; padding: 0;} /*=Width was given automatically */
+			.trackbar .handler-block{background-color: #DADADA; width: 0;}
+	    .trackbar .left-block{border-radius: 3px 0 0 3px; float: left; margin: 0 0 0 -3px; padding: 0 0 0 3px;}
+	    .trackbar .right-block{border-radius: 0 3px 3px 0; float: right; margin: 0 -3px 0 0; padding: 0 3px 0 0;}
+				.trackbar .trackbar-handler{-moz-box-sizing: content-box; -webkit-box-sizing: content-box; -o-box-sizing: content-box; box-sizing: content-box; border: 4px solid #04B6F0; background-color: #0E6A93; border-radius: 50% 50% 50% 50%; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); cursor:pointer; width: 4px; height: 4px;margin-top: -4px;}
+    		.scale.disabled .trackbar,
+        .scale.disabled .trackbar-handler{background-color: #F2F2F2;}
+        .scale.disabled .trackbar-handler{border-color: #BABABA;}
+
+		    .trackbar .left-handler{float: right; margin-right: -6px;}
+		    .trackbar .right-handler{float: left; margin-left: -6px;}
+
+		.trackbar-scale{height: 18px; line-height: normal; margin: 2px 0 0; padding: 0 8px 0 5px;}
+		.trackbar-scale a,
+		.trackbar-scale div{border-left: 1px solid #DADADA;display:block;float:left;margin-right: -2px;text-decoration: none;position: relative;height: 5px;}
+
+		.trackbar-scale a.last,
+		.trackbar-scale div.last{border-right: 1px solid #DADADA; margin-right: -4px;}
+
+			.trackbar-scale a:hover,
+			.trackbar-scale a:hover span,
+			.trackbar-scale a:hover + a .from{background-color: #F8F8F8; color:#000000;}
+
+			.trackbar-scale div{background-color: #0EB9F0;}
+			.trackbar-scale a span,
+			.trackbar-scale div span{color: #666666; font-size: 8px; position: absolute; top: 5px;}
+
+			.trackbar-scale a span.from,
+			.trackbar-scale div span.from{left: 0; }
+
+			.trackbar-scale a span.to,
+			.trackbar-scale div span.to{right: 0; }
+
+  /*=Price diagram */
+  .price-diagram{box-shadow: 0 1px 1px #DBDEE1 inset; background: #F2F2F2 url('../../image/ocfilter/diagram-bg-repeat.png') repeat 0 1px; border-radius: 3px 3px 3px 3px; overflow: hidden; margin: 10px 10px 5px 5px;}
+    .diagram-field{position:relative;margin: 0;height: 40px;}
+			.diagram-field circle{stroke-width: 2; opacity: 1;}
+			.diagram-field path{stroke-width: 1; opacity: 0.25; stroke-opacity: 1;}
+
+  .ocfilter .popover .form-inline .form-control{width: 100px;}
+/* Position center style */
+
+.ocfilter-content-top,
+
+.ocfilter-content-bottom{}
+	.ocfilter-content-top .box-content,
+
+	.ocfilter-content-bottom .box-content{font-size: 0;}
+
+  .ocfilter-content-top .ocfilter-option,
+
+	.ocfilter-content-bottom .ocfilter-option{display: inline-block; vertical-align: top; width: 33%;}
+
+  .ocfilter-content-top .ocfilter-option + .ocfilter-option,
+
+	.ocfilter-content-bottom .ocfilter-option + .ocfilter-option{border-top: none;}
+	
+	.ocfilter-option label:before  {
+		content: "";
+		width: 19px;
+		height: 17px;
+		display: inline-block;
+		padding: 0;
+		vertical-align: top;
+		margin: 0 8px 0 0;
+		border: 1px solid rgba(106, 113, 122, 0.2);
+		border-radius: 3px;
+		box-shadow: inset 3px 3px 4px rgba(0, 0, 0, 0.1);
+	}
+	.ocfilter-option label.selected:before  {
+		background: #58ca39;
+		content: "\f00c";
+		font: normal normal normal 14px/1 FontAwesome;
+		color: #fff;
+		font-size: 13px;
+		text-align: center;
+		line-height: 15px;
+	}
+	.ocfilter-option label [type="checkbox"] {
+		display: none;
+	}
+	.oc-price-range {
+    display: flex;
+    align-items: center;
+    margin-bottom: 28px;
+    justify-content: space-between;
+    margin-top: 15px;
+
+}
+.oc-flex {
+	 display: flex;
+    align-items: center;
+}
+.oc-form-group .form-control {
+    border-color: #e1e3e4;
+    border-radius: 2px;
+    height: 36px;
+    box-shadow: inset 3px 3px 4px rgba(0, 0, 0, 0.1);
+    max-width: 70px;	
+}
+.oc-splite {
+    color: #505050;
+    font-weight: bold;
+    font-size: 25px;
+    margin: 0 7px;
+    line-height: normal;
+    text-align: center;	
+}
+.oc-symbol {
+    font-size: 15px;
+    color: #505050;
+    margin: 0 5px;	
+}
+#ocfilter-button2 .btn {
+    background: linear-gradient(to top, #f5f5f5, #fff);
+    font-weight: bold;
+    color: #4280b7;
+    font-size: 14px;
+    padding: 9px 14px;
+    margin-top: -1px;
+    text-transform: uppercase;
+    box-shadow: inset 0px -3px 0px #c3c3c3;
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;	
+}
+#ocfilter-button2 {
+	
+}
