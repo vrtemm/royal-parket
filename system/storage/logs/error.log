@@ -27,3 +27,8 @@
 2017-07-13 12:06:26 - PHP Warning:  Invalid argument supplied for foreach() in /home/www/demo-opencart.ru/public_html/system/library/cart/cart.php on line 50
 2017-07-13 12:06:26 - PHP Warning:  Invalid argument supplied for foreach() in /home/www/demo-opencart.ru/public_html/system/library/cart/cart.php on line 50
 2017-07-13 12:06:26 - PHP Warning:  Invalid argument supplied for foreach() in /home/www/demo-opencart.ru/public_html/system/library/cart/cart.php on line 50
+2021-07-09 12:21:47 - PHP Warning:  in_array() expects parameter 2 to be array, string given in /Applications/MAMP/htdocs/royal-parket/admin/view/template/setting/setting.tpl on line 1150
+2021-07-09 12:21:47 - PHP Warning:  in_array() expects parameter 2 to be array, string given in /Applications/MAMP/htdocs/royal-parket/admin/view/template/setting/setting.tpl on line 1150
+2021-07-09 12:21:47 - PHP Warning:  in_array() expects parameter 2 to be array, string given in /Applications/MAMP/htdocs/royal-parket/admin/view/template/setting/setting.tpl on line 1150
+2021-07-09 12:21:47 - PHP Warning:  in_array() expects parameter 2 to be array, string given in /Applications/MAMP/htdocs/royal-parket/admin/view/template/setting/setting.tpl on line 1150
+2021-07-09 12:21:47 - PHP Notice:  Use of undefined constant DIR_CATALOG - assumed 'DIR_CATALOG' in /Applications/MAMP/htdocs/royal-parket/admin/controller/setting/setting.php on line 1254
