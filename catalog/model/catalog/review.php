@@ -1,15 +1,11 @@
 <?php
 class ModelCatalogReview extends Model {
 	public function addReview($product_id, $data) {
-		$this->event->trigger('pre.review.add', $data);
-		if(!isset($data['parent_id'])) {
-			$data['parent_id'] = 0;
-		}
-		$this->db->query("INSERT INTO " . DB_PREFIX . "review SET parent_id = '" . (int)$data['parent_id'] . "', bads = '" . $this->db->escape($data['bads']) . "', good = '" . $this->db->escape($data['good']) . "', author = '" . $this->db->escape($data['name']) . "', customer_id = '" . (int)$this->customer->getId() . "', product_id = '" . (int)$product_id . "', text = '" . $this->db->escape($data['text']) . "', rating = '" . (int)$data['rating'] . "', date_added = NOW()");
+		$this->db->query("INSERT INTO " . DB_PREFIX . "review SET author = '" . $this->db->escape($data['name']) . "', customer_id = '" . (int)$this->customer->getId() . "', product_id = '" . (int)$product_id . "', text = '" . $this->db->escape($data['text']) . "', rating = '" . (int)$data['rating'] . "', date_added = NOW()");
 
 		$review_id = $this->db->getLastId();
 
-		if ($this->config->get('config_review_mail')) {
+		if (in_array('review', (array)$this->config->get('config_mail_alert'))) {
 			$this->load->language('mail/review');
 			$this->load->model('catalog/product');
 			
@@ -41,20 +37,18 @@ class ModelCatalogReview extends Model {
 			$mail->send();
 
 			// Send to additional alert emails
-			$emails = explode(',', $this->config->get('config_mail_alert'));
+			$emails = explode(',', $this->config->get('config_alert_email'));
 
 			foreach ($emails as $email) {
-				if ($email && preg_match($this->config->get('config_mail_regexp'), $email)) {
+				if ($email && filter_var($email, FILTER_VALIDATE_EMAIL)) {
 					$mail->setTo($email);
 					$mail->send();
 				}
 			}
 		}
-
-		$this->event->trigger('post.review.add', $review_id);
 	}
 
-	public function getReviewsByProductId($product_id, $start = 0, $limit = 20, $parent_id = 0) {
+	public function getReviewsByProductId($product_id, $start = 0, $limit = 20) {
 		if ($start < 0) {
 			$start = 0;
 		}
@@ -63,20 +57,14 @@ class ModelCatalogReview extends Model {
 			$limit = 20;
 		}
 
-		$query = $this->db->query("SELECT r.answer, r.good, r.bads, r.review_id, r.author, r.rating, r.text, p.product_id, pd.name, p.price, p.image, r.date_added FROM " . DB_PREFIX . "review r LEFT JOIN " . DB_PREFIX . "product p ON (r.product_id = p.product_id) LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) WHERE p.product_id = '" . (int)$product_id . "' AND p.date_available <= NOW() AND r.parent_id = '" . $parent_id . "' AND p.status = '1' AND r.status = '1' AND pd.language_id = '" . (int)$this->config->get('config_language_id') . "' ORDER BY r.date_added DESC LIMIT " . (int)$start . "," . (int)$limit);
+		$query = $this->db->query("SELECT r.review_id, r.author, r.rating, r.text, p.product_id, pd.name, p.price, p.image, r.date_added FROM " . DB_PREFIX . "review r LEFT JOIN " . DB_PREFIX . "product p ON (r.product_id = p.product_id) LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) WHERE p.product_id = '" . (int)$product_id . "' AND p.date_available <= NOW() AND p.status = '1' AND r.status = '1' AND pd.language_id = '" . (int)$this->config->get('config_language_id') . "' ORDER BY r.date_added DESC LIMIT " . (int)$start . "," . (int)$limit);
 
 		return $query->rows;
-	} 
+	}
 
 	public function getTotalReviewsByProductId($product_id) {
-		$query = $this->db->query("SELECT COUNT(*) AS total FROM " . DB_PREFIX . "review r LEFT JOIN " . DB_PREFIX . "product p ON (r.product_id = p.product_id) LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) WHERE p.product_id = '" . (int)$product_id . "'  AND p.date_available <= NOW() AND p.status = '1' AND r.status = '1' AND r.parent_id = 0 AND pd.language_id = '" . (int)$this->config->get('config_language_id') . "'");
+		$query = $this->db->query("SELECT COUNT(*) AS total FROM " . DB_PREFIX . "review r LEFT JOIN " . DB_PREFIX . "product p ON (r.product_id = p.product_id) LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) WHERE p.product_id = '" . (int)$product_id . "' AND p.date_available <= NOW() AND p.status = '1' AND r.status = '1' AND pd.language_id = '" . (int)$this->config->get('config_language_id') . "'");
 
 		return $query->row['total'];
-	}
-	
-	public function getLatest($limit = 9) {
-		$query = $this->db->query("SELECT r.review_id, r.author, r.rating, r.text, p.product_id, pd.name, p.price, p.image, r.date_added FROM " . DB_PREFIX . "review r LEFT JOIN " . DB_PREFIX . "product p ON (r.product_id = p.product_id) LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) WHERE p.date_available <= NOW() AND p.status = '1' AND r.status = '1' AND pd.language_id = '" . (int)$this->config->get('config_language_id') . "' ORDER BY r.date_added DESC LIMIT " . (int)$limit);
-
-		return $query->rows;
 	}
 }

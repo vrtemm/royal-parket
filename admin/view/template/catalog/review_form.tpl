@@ -53,24 +53,6 @@
               <?php } ?>
             </div>
           </div>
-<div class="form-group">
-            <label class="col-sm-2 control-label" for="input-good">good</label>
-            <div class="col-sm-10">
-              <textarea name="good" cols="60" rows="8" placeholder="good" id="input-good" class="form-control"><?php echo $good; ?></textarea>
-            </div>
-          </div>
-<div class="form-group">
-            <label class="col-sm-2 control-label" for="input-bads">bads</label>
-            <div class="col-sm-10">
-              <textarea name="bads" cols="60" rows="8" placeholder="bads" id="input-bads" class="form-control"><?php echo $bads; ?></textarea>
-            </div>
-          </div>
-		    <div class="form-group">
-            <label class="col-sm-2 control-label" for="input-answer">answer</label>
-            <div class="col-sm-10">
-              <textarea name="answer" cols="60" rows="8" placeholder="answer" id="input-answer" class="form-control"><?php echo $answer; ?></textarea>
-            </div>
-          </div>
           <div class="form-group required">
             <label class="col-sm-2 control-label" for="input-name"><?php echo $entry_rating; ?></label>
             <div class="col-sm-10">
@@ -125,6 +107,17 @@
             </div>
           </div>
           <div class="form-group">
+            <label class="col-sm-2 control-label" for="input-date-added"><?php echo $entry_date_added; ?></label>
+            <div class="col-sm-3">
+              <div class="input-group datetime">
+                <input type="text" name="date_added" value="<?php echo $date_added; ?>" placeholder="<?php echo $entry_date_added; ?>" data-date-format="YYYY-MM-DD HH:mm:ss" id="input-date-added" class="form-control" />
+                <span class="input-group-btn">
+                <button type="button" class="btn btn-default"><i class="fa fa-calendar"></i></button>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
             <label class="col-sm-2 control-label" for="input-status"><?php echo $entry_status; ?></label>
             <div class="col-sm-10">
               <select name="status" id="input-status" class="form-control">
@@ -138,31 +131,16 @@
               </select>
             </div>
           </div>
-		  
-		   <div class="form-group">
-                <label class="col-sm-2 control-label" for="input-date-added">Дата написания</label>
-                <div class="col-sm-3">
-                  <div class="input-group date">
-                    <input type="text" name="date_added" value="<?php echo $date_added; ?>" placeholder="Дата" data-date-format="YYYY-MM-DD" id="input-date-added" class="form-control" />
-                    <span class="input-group-btn">
-                    <button class="btn btn-default" type="button"><i class="fa fa-calendar"></i></button>
-                    </span></div>
-                </div>
-              </div>
         </form>
       </div>
     </div>
   </div>
   <script type="text/javascript"><!--
-			<?php if ($ckeditor) { ?>
-				ckeditorInit('input-answer', '<?php echo $token; ?>');
-				<?php } else { ?>
-				$('#input-answer').summernote({
-					height: 300,
-					lang:'<?php echo $lang; ?>'
-				});
-			<?php } ?>
-	//--></script> 
+$('.datetime').datetimepicker({
+	pickDate: true,
+	pickTime: true
+});
+//--></script>
   <script type="text/javascript"><!--
 $('input[name=\'product\']').autocomplete({
 	'source': function(request, response) {
@@ -184,8 +162,5 @@ $('input[name=\'product\']').autocomplete({
 		$('input[name=\'product_id\']').val(item['value']);		
 	}	
 });
-$('.date').datetimepicker({
-			pickTime: false
-		});
 //--></script></div>
 <?php echo $footer; ?>

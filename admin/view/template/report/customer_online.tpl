@@ -29,7 +29,7 @@
                 <label class="control-label" for="input-customer"><?php echo $entry_customer; ?></label>
                 <input type="text" name="filter_customer" value="<?php echo $filter_customer; ?>" placeholder="<?php echo $entry_customer; ?>" id="input-customer" class="form-control" />
               </div>
-              <button type="button" id="button-filter" class="btn btn-primary pull-right"><i class="fa fa-search"></i> <?php echo $button_filter; ?></button>
+              <button type="button" id="button-filter" class="btn btn-primary pull-right"><i class="fa fa-filter"></i> <?php echo $button_filter; ?></button>
             </div>
           </div>
         </div>
@@ -57,10 +57,10 @@
                   <?php } ?></td>
                 <td class="text-left"><?php echo $customer['date_added']; ?></td>
                 <td class="text-right"><?php if ($customer['customer_id']) { ?>
-                  <a href="<?php echo $customer['edit']; ?>" data-toggle="tooltip" title="<?php echo $button_edit; ?>" class="btn btn-primary"><i class="fa fa-pencil"></i></a></td>
-                <?php } else { ?>
-                <button type="button" data-toggle="tooltip" title="<?php echo $button_edit; ?>" class="btn btn-primary" disabled="disabled"><i class="fa fa-pencil"></i></button>
-                <?php } ?>
+                  <a href="<?php echo $customer['edit']; ?>" data-toggle="tooltip" title="<?php echo $button_edit; ?>" class="btn btn-primary"><i class="fa fa-pencil"></i></a>
+                  <?php } else { ?>
+                  <button type="button" data-toggle="tooltip" title="<?php echo $button_edit; ?>" class="btn btn-primary" disabled="disabled"><i class="fa fa-pencil"></i></button>
+                  <?php } ?></td>
               </tr>
               <?php } ?>
               <?php } else { ?>
@@ -81,20 +81,41 @@
   <script type="text/javascript"><!--
 $('#button-filter').on('click', function() {
 	url = 'index.php?route=report/customer_online&token=<?php echo $token; ?>';
-	
+
 	var filter_customer = $('input[name=\'filter_customer\']').val();
-	
+
 	if (filter_customer) {
 		url += '&filter_customer=' + encodeURIComponent(filter_customer);
 	}
-		
+
 	var filter_ip = $('input[name=\'filter_ip\']').val();
-	
+
 	if (filter_ip) {
 		url += '&filter_ip=' + encodeURIComponent(filter_ip);
 	}
-				
+
 	location = url;
+});
+//--></script>
+  <script type="text/javascript"><!--
+$('input[name=\'filter_customer\']').autocomplete({
+  'source': function(request, response) {
+    $.ajax({
+      url: 'index.php?route=customer/customer/autocomplete&token=<?php echo $token; ?>&filter_name=' +  encodeURIComponent(request),
+      dataType: 'json',
+      success: function(json) {
+        response($.map(json, function(item) {
+          return {
+            label: item['name'],
+            value: item['customer_id']
+          }
+        }));
+      }
+    });
+  },
+  'select': function(item) {
+    $('input[name=\'filter_customer\']').val(item['label']);
+  }
 });
 //--></script></div>
 <?php echo $footer; ?>

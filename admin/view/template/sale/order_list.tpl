@@ -3,9 +3,11 @@
   <div class="page-header">
     <div class="container-fluid">
       <div class="pull-right">
-        <button type="submit" id="button-shipping" form="form-order" formaction="<?php echo $shipping; ?>" data-toggle="tooltip" title="<?php echo $button_shipping_print; ?>" class="btn btn-info"><i class="fa fa-truck"></i></button>
-        <button type="submit" id="button-invoice" form="form-order" formaction="<?php echo $invoice; ?>" data-toggle="tooltip" title="<?php echo $button_invoice_print; ?>" class="btn btn-info"><i class="fa fa-print"></i></button>
-        <a href="<?php echo $add; ?>" data-toggle="tooltip" title="<?php echo $button_add; ?>" class="btn btn-primary"><i class="fa fa-plus"></i></a></div>
+        <button type="submit" id="button-shipping" form="form-order" formaction="<?php echo $shipping; ?>" formtarget="_blank" data-toggle="tooltip" title="<?php echo $button_shipping_print; ?>" class="btn btn-info"><i class="fa fa-truck"></i></button>
+        <button type="submit" id="button-invoice" form="form-order" formaction="<?php echo $invoice; ?>" formtarget="_blank" data-toggle="tooltip" title="<?php echo $button_invoice_print; ?>" class="btn btn-info"><i class="fa fa-print"></i></button>
+        <a href="<?php echo $add; ?>" data-toggle="tooltip" title="<?php echo $button_add; ?>" class="btn btn-primary"><i class="fa fa-plus"></i></a>
+        <button type="button" id="button-delete" form="form-order" formaction="<?php echo $delete; ?>" data-toggle="tooltip" title="<?php echo $button_delete; ?>" class="btn btn-danger"><i class="fa fa-trash-o"></i></button>
+      </div>
       <h1><?php echo $heading_title; ?></h1>
       <ul class="breadcrumb">
         <?php foreach ($breadcrumbs as $breadcrumb) { ?>
@@ -83,11 +85,11 @@
                   <button type="button" class="btn btn-default"><i class="fa fa-calendar"></i></button>
                   </span></div>
               </div>
-              <button type="button" id="button-filter" class="btn btn-primary pull-right"><i class="fa fa-search"></i> <?php echo $button_filter; ?></button>
+              <button type="button" id="button-filter" class="btn btn-primary pull-right"><i class="fa fa-filter"></i> <?php echo $button_filter; ?></button>
             </div>
           </div>
         </div>
-        <form method="post" enctype="multipart/form-data" target="_blank" id="form-order">
+        <form method="post" action="" enctype="multipart/form-data" id="form-order">
           <div class="table-responsive">
             <table class="table table-bordered table-hover">
               <thead>
@@ -103,7 +105,7 @@
                     <?php } else { ?>
                     <a href="<?php echo $sort_customer; ?>"><?php echo $column_customer; ?></a>
                     <?php } ?></td>
-                  <td class="text-left"><?php if ($sort == 'status') { ?>
+                  <td class="text-left"><?php if ($sort == 'order_status') { ?>
                     <a href="<?php echo $sort_status; ?>" class="<?php echo strtolower($order); ?>"><?php echo $column_status; ?></a>
                     <?php } else { ?>
                     <a href="<?php echo $sort_status; ?>"><?php echo $column_status; ?></a>
@@ -138,11 +140,11 @@
                     <input type="hidden" name="shipping_code[]" value="<?php echo $order['shipping_code']; ?>" /></td>
                   <td class="text-right"><?php echo $order['order_id']; ?></td>
                   <td class="text-left"><?php echo $order['customer']; ?></td>
-                  <td class="text-left"><?php echo $order['status']; ?></td>
+                  <td class="text-left"><?php echo $order['order_status']; ?></td>
                   <td class="text-right"><?php echo $order['total']; ?></td>
                   <td class="text-left"><?php echo $order['date_added']; ?></td>
                   <td class="text-left"><?php echo $order['date_modified']; ?></td>
-                  <td class="text-right"><a href="<?php echo $order['view']; ?>" data-toggle="tooltip" title="<?php echo $button_view; ?>" class="btn btn-info"><i class="fa fa-eye"></i></a> <a href="<?php echo $order['edit']; ?>" data-toggle="tooltip" title="<?php echo $button_edit; ?>" class="btn btn-primary"><i class="fa fa-pencil"></i></a> <a href="<?php echo $order['delete']; ?>" id="button-delete<?php echo $order['order_id']; ?>" data-toggle="tooltip" title="<?php echo $button_delete; ?>" class="btn btn-danger"><i class="fa fa-trash-o"></i></a></td>
+                  <td class="text-right"><a href="<?php echo $order['view']; ?>" data-toggle="tooltip" title="<?php echo $button_view; ?>" class="btn btn-info"><i class="fa fa-eye"></i></a> <a href="<?php echo $order['edit']; ?>" data-toggle="tooltip" title="<?php echo $button_edit; ?>" class="btn btn-primary"><i class="fa fa-pencil"></i></a></td>
                 </tr>
                 <?php } ?>
                 <?php } else { ?>
@@ -164,43 +166,43 @@
   <script type="text/javascript"><!--
 $('#button-filter').on('click', function() {
 	url = 'index.php?route=sale/order&token=<?php echo $token; ?>';
-	
+
 	var filter_order_id = $('input[name=\'filter_order_id\']').val();
-	
+
 	if (filter_order_id) {
 		url += '&filter_order_id=' + encodeURIComponent(filter_order_id);
 	}
-	
+
 	var filter_customer = $('input[name=\'filter_customer\']').val();
-	
+
 	if (filter_customer) {
 		url += '&filter_customer=' + encodeURIComponent(filter_customer);
 	}
-	
+
 	var filter_order_status = $('select[name=\'filter_order_status\']').val();
-	
+
 	if (filter_order_status != '*') {
 		url += '&filter_order_status=' + encodeURIComponent(filter_order_status);
-	}	
+	}
 
 	var filter_total = $('input[name=\'filter_total\']').val();
 
 	if (filter_total) {
 		url += '&filter_total=' + encodeURIComponent(filter_total);
-	}	
-	
+	}
+
 	var filter_date_added = $('input[name=\'filter_date_added\']').val();
-	
+
 	if (filter_date_added) {
 		url += '&filter_date_added=' + encodeURIComponent(filter_date_added);
 	}
-	
+
 	var filter_date_modified = $('input[name=\'filter_date_modified\']').val();
-	
+
 	if (filter_date_modified) {
 		url += '&filter_date_modified=' + encodeURIComponent(filter_date_modified);
 	}
-				
+
 	location = url;
 });
 //--></script> 
@@ -208,8 +210,8 @@ $('#button-filter').on('click', function() {
 $('input[name=\'filter_customer\']').autocomplete({
 	'source': function(request, response) {
 		$.ajax({
-			url: 'index.php?route=sale/customer/autocomplete&token=<?php echo $token; ?>&filter_name=' +  encodeURIComponent(request),
-			dataType: 'json',			
+			url: 'index.php?route=customer/customer/autocomplete&token=<?php echo $token; ?>&filter_name=' +  encodeURIComponent(request),
+			dataType: 'json',
 			success: function(json) {
 				response($.map(json, function(item) {
 					return {
@@ -222,35 +224,44 @@ $('input[name=\'filter_customer\']').autocomplete({
 	},
 	'select': function(item) {
 		$('input[name=\'filter_customer\']').val(item['label']);
-	}	
+	}
 });
 //--></script> 
   <script type="text/javascript"><!--
 $('input[name^=\'selected\']').on('change', function() {
 	$('#button-shipping, #button-invoice').prop('disabled', true);
-	
+
 	var selected = $('input[name^=\'selected\']:checked');
-	
+
 	if (selected.length) {
 		$('#button-invoice').prop('disabled', false);
 	}
-	
+
 	for (i = 0; i < selected.length; i++) {
 		if ($(selected[i]).parent().find('input[name^=\'shipping_code\']').val()) {
 			$('#button-shipping').prop('disabled', false);
-			
+
 			break;
 		}
 	}
 });
 
+$('#button-shipping, #button-invoice').prop('disabled', true);
+
 $('input[name^=\'selected\']:first').trigger('change');
 
-$('a[id^=\'button-delete\']').on('click', function(e) {
-	e.preventDefault();
+// IE and Edge fix!
+$('#button-shipping, #button-invoice').on('click', function(e) {
+	$('#form-order').attr('action', this.getAttribute('formAction'));
+});
+
+$('#button-delete').on('click', function(e) {
+	$('#form-order').attr('action', this.getAttribute('formAction'));
 	
 	if (confirm('<?php echo $text_confirm; ?>')) {
-		location = $(this).attr('href');
+		$('#form-order').submit();
+	} else {
+		return false;
 	}
 });
 //--></script> 
@@ -261,4 +272,4 @@ $('.date').datetimepicker({
 	pickTime: false
 });
 //--></script></div>
-<?php echo $footer; ?>
+<?php echo $footer; ?> 

@@ -4,9 +4,9 @@ class ControllerAccountEdit extends Controller {
 
 	public function index() {
 		if (!$this->customer->isLogged()) {
-			$this->session->data['redirect'] = $this->url->link('account/edit', '', 'SSL');
+			$this->session->data['redirect'] = $this->url->link('account/edit', '', true);
 
-			$this->response->redirect($this->url->link('account/login', '', 'SSL'));
+			$this->response->redirect($this->url->link('account/login', '', true));
 		}
 
 		$this->load->language('account/edit');
@@ -25,16 +25,18 @@ class ControllerAccountEdit extends Controller {
 			$this->session->data['success'] = $this->language->get('text_success');
 
 			// Add to activity log
-			$this->load->model('account/activity');
+			if ($this->config->get('config_customer_activity')) {
+				$this->load->model('account/activity');
 
-			$activity_data = array(
-				'customer_id' => $this->customer->getId(),
-				'name'        => $this->customer->getFirstName() . ' ' . $this->customer->getLastName()
-			);
+				$activity_data = array(
+					'customer_id' => $this->customer->getId(),
+					'name'        => $this->customer->getFirstName() . ' ' . $this->customer->getLastName()
+				);
 
-			$this->model_account_activity->addActivity('edit', $activity_data);
+				$this->model_account_activity->addActivity('edit', $activity_data);
+			}
 
-			$this->response->redirect($this->url->link('account/account', '', 'SSL'));
+			$this->response->redirect($this->url->link('account/account', '', true));
 		}
 
 		$data['breadcrumbs'] = array();
@@ -46,12 +48,12 @@ class ControllerAccountEdit extends Controller {
 
 		$data['breadcrumbs'][] = array(
 			'text'      => $this->language->get('text_account'),
-			'href'      => $this->url->link('account/account', '', 'SSL')
+			'href'      => $this->url->link('account/account', '', true)
 		);
 
 		$data['breadcrumbs'][] = array(
 			'text'      => $this->language->get('text_edit'),
-			'href'      => $this->url->link('account/edit', '', 'SSL')
+			'href'      => $this->url->link('account/edit', '', true)
 		);
 
 		$data['heading_title'] = $this->language->get('heading_title');
@@ -107,7 +109,7 @@ class ControllerAccountEdit extends Controller {
 			$data['error_custom_field'] = array();
 		}
 
-		$data['action'] = $this->url->link('account/edit', '', 'SSL');
+		$data['action'] = $this->url->link('account/edit', '', true);
 
 		if ($this->request->server['REQUEST_METHOD'] != 'POST') {
 			$customer_info = $this->model_account_customer->getCustomer($this->customer->getId());
@@ -161,12 +163,12 @@ class ControllerAccountEdit extends Controller {
 		if (isset($this->request->post['custom_field'])) {
 			$data['account_custom_field'] = $this->request->post['custom_field'];
 		} elseif (isset($customer_info)) {
-			$data['account_custom_field'] = unserialize($customer_info['custom_field']);
+			$data['account_custom_field'] = json_decode($customer_info['custom_field'], true);
 		} else {
 			$data['account_custom_field'] = array();
 		}
 
-		$data['back'] = $this->url->link('account/account', '', 'SSL');
+		$data['back'] = $this->url->link('account/account', '', true);
 
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['column_right'] = $this->load->controller('common/column_right');
@@ -175,11 +177,7 @@ class ControllerAccountEdit extends Controller {
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
 
-		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/account/edit.tpl')) {
-			$this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/account/edit.tpl', $data));
-		} else {
-			$this->response->setOutput($this->load->view('default/template/account/edit.tpl', $data));
-		}
+		$this->response->setOutput($this->load->view('account/edit', $data));
 	}
 
 	protected function validate() {
@@ -191,7 +189,7 @@ class ControllerAccountEdit extends Controller {
 			$this->error['lastname'] = $this->language->get('error_lastname');
 		}
 
-		if ((utf8_strlen($this->request->post['email']) > 96) || !preg_match('/^[^\@]+@.*.[a-z]{2,15}$/i', $this->request->post['email'])) {
+		if ((utf8_strlen($this->request->post['email']) > 96) || !filter_var($this->request->post['email'], FILTER_VALIDATE_EMAIL)) {
 			$this->error['email'] = $this->language->get('error_email');
 		}
 
@@ -211,7 +209,9 @@ class ControllerAccountEdit extends Controller {
 		foreach ($custom_fields as $custom_field) {
 			if (($custom_field['location'] == 'account') && $custom_field['required'] && empty($this->request->post['custom_field'][$custom_field['custom_field_id']])) {
 				$this->error['custom_field'][$custom_field['custom_field_id']] = sprintf($this->language->get('error_custom_field'), $custom_field['name']);
-			}
+			} elseif (($custom_field['location'] == 'account') && ($custom_field['type'] == 'text') && !empty($custom_field['validation']) && !filter_var($this->request->post['custom_field'][$custom_field['custom_field_id']], FILTER_VALIDATE_REGEXP, array('options' => array('regexp' => $custom_field['validation'])))) {
+                $this->error['custom_field'][$custom_field['custom_field_id']] = sprintf($this->language->get('error_custom_field'), $custom_field['name']);
+            }
 		}
 
 		return !$this->error;

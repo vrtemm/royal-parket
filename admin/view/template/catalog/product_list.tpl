@@ -69,7 +69,23 @@
                   <?php } ?>
                 </select>
               </div>
-              <button type="button" id="button-filter" class="btn btn-primary pull-right"><i class="fa fa-search"></i> <?php echo $button_filter; ?></button>
+              <div class="form-group">
+                <label class="control-label" for="input-image"><?php echo $entry_image; ?></label>
+                <select name="filter_image" id="input-image" class="form-control">
+                  <option value="*"></option>
+                  <?php if ($filter_image) { ?>
+                  <option value="1" selected="selected"><?php echo $text_enabled; ?></option>
+                  <?php } else { ?>
+                  <option value="1"><?php echo $text_enabled; ?></option>
+                  <?php } ?>
+                  <?php if (!$filter_image && !is_null($filter_image)) { ?>
+                  <option value="0" selected="selected"><?php echo $text_disabled; ?></option>
+                  <?php } else { ?>
+                  <option value="0"><?php echo $text_disabled; ?></option>
+                  <?php } ?>
+                </select>
+              </div>
+              <button type="button" id="button-filter" class="btn btn-primary pull-right"><i class="fa fa-filter"></i> <?php echo $button_filter; ?></button>
             </div>
           </div>
         </div>
@@ -90,7 +106,7 @@
                     <?php } else { ?>
                     <a href="<?php echo $sort_model; ?>"><?php echo $column_model; ?></a>
                     <?php } ?></td>
-                  <td class="text-left"><?php if ($sort == 'p.price') { ?>
+                  <td class="text-right"><?php if ($sort == 'p.price') { ?>
                     <a href="<?php echo $sort_price; ?>" class="<?php echo strtolower($order); ?>"><?php echo $column_price; ?></a>
                     <?php } else { ?>
                     <a href="<?php echo $sort_price; ?>"><?php echo $column_price; ?></a>
@@ -124,7 +140,7 @@
                     <?php } ?></td>
                   <td class="text-left"><?php echo $product['name']; ?></td>
                   <td class="text-left"><?php echo $product['model']; ?></td>
-                  <td class="text-left"><?php if ($product['special']) { ?>
+                  <td class="text-right"><?php if ($product['special']) { ?>
                     <span style="text-decoration: line-through;"><?php echo $product['price']; ?></span><br/>
                     <div class="text-danger"><?php echo $product['special']; ?></div>
                     <?php } else { ?>
@@ -191,9 +207,15 @@ $('#button-filter').on('click', function() {
 		url += '&filter_status=' + encodeURIComponent(filter_status);
 	}
 
+  var filter_image = $('select[name=\'filter_image\']').val();
+
+  if (filter_image != '*') {
+    url += '&filter_image=' + encodeURIComponent(filter_image);
+  }
+
 	location = url;
 });
-//--></script> 
+//--></script>
   <script type="text/javascript"><!--
 $('input[name=\'filter_name\']').autocomplete({
 	'source': function(request, response) {

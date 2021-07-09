@@ -12,11 +12,11 @@ define('DIR_LANGUAGE', '/Applications/MAMP/htdocs/royal-parket/catalog/language/
 define('DIR_TEMPLATE', '/Applications/MAMP/htdocs/royal-parket/catalog/view/theme/');
 define('DIR_CONFIG', '/Applications/MAMP/htdocs/royal-parket/system/config/');
 define('DIR_IMAGE', '/Applications/MAMP/htdocs/royal-parket/image/');
-define('DIR_CACHE', '/Applications/MAMP/htdocs/royal-parket/system/cache/');
-define('DIR_DOWNLOAD', '/Applications/MAMP/htdocs/royal-parket/system/download/');
-define('DIR_UPLOAD', '/Applications/MAMP/htdocs/royal-parket/system/upload/');
-define('DIR_MODIFICATION', '/Applications/MAMP/htdocs/royal-parket/system/modification/');
-define('DIR_LOGS', '/Applications/MAMP/htdocs/royal-parket/system/logs/');
+define('DIR_CACHE', '/Applications/MAMP/htdocs/royal-parket/system/storage/cache/');
+define('DIR_DOWNLOAD', '/Applications/MAMP/htdocs/royal-parket/system/storage/download/');
+define('DIR_UPLOAD', '/Applications/MAMP/htdocs/royal-parket/system/storage/upload/');
+define('DIR_MODIFICATION', '/Applications/MAMP/htdocs/royal-parket/system/storage/modification/');
+define('DIR_LOGS', '/Applications/MAMP/htdocs/royal-parket/system/storage/logs/');
 
 // DB
 define('DB_DRIVER', 'mysqli');

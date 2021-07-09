@@ -15,9 +15,7 @@
     <?php } ?>
     <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
       <div class="row">
-        <?php if ($column_left && $column_right) { ?>
-        <?php $class = 'col-sm-6'; ?>
-        <?php } elseif ($column_left || $column_right) { ?>
+        <?php if ($column_left || $column_right) { ?>
         <?php $class = 'col-sm-6'; ?>
         <?php } else { ?>
         <?php $class = 'col-sm-8'; ?>
@@ -69,14 +67,14 @@
             <?php } ?>
             <?php if ($review_status) { ?>
             <div class="tab-pane" id="tab-review">
-              <form class="form-horizontal">
+              <form class="form-horizontal" id="form-review">
                 <div id="review"></div>
                 <h2><?php echo $text_write; ?></h2>
                 <?php if ($review_guest) { ?>
                 <div class="form-group required">
                   <div class="col-sm-12">
                     <label class="control-label" for="input-name"><?php echo $entry_name; ?></label>
-                    <input type="text" name="name" value="" id="input-name" class="form-control" />
+                    <input type="text" name="name" value="<?php echo $customer_name; ?>" id="input-name" class="form-control" />
                   </div>
                 </div>
                 <div class="form-group required">
@@ -101,16 +99,8 @@
                     <input type="radio" name="rating" value="5" />
                     &nbsp;<?php echo $entry_good; ?></div>
                 </div>
-                <div class="form-group required">
-                  <div class="col-sm-12">
-                    <label class="control-label" for="input-captcha"><?php echo $entry_captcha; ?></label>
-                    <input type="text" name="captcha" value="" id="input-captcha" class="form-control" />
-                  </div>
-                </div>
-                <div class="form-group">
-                  <div class="col-sm-12"> <img src="index.php?route=tool/captcha" alt="" id="captcha" /> </div>
-                </div>
-                <div class="buttons">
+                <?php echo $captcha; ?>
+                <div class="buttons clearfix">
                   <div class="pull-right">
                     <button type="button" id="button-review" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary"><?php echo $button_continue; ?></button>
                   </div>
@@ -123,9 +113,7 @@
             <?php } ?>
           </div>
         </div>
-        <?php if ($column_left && $column_right) { ?>
-        <?php $class = 'col-sm-6'; ?>
-        <?php } elseif ($column_left || $column_right) { ?>
+        <?php if ($column_left || $column_right) { ?>
         <?php $class = 'col-sm-6'; ?>
         <?php } else { ?>
         <?php $class = 'col-sm-4'; ?>
@@ -202,6 +190,9 @@
                 <div class="radio">
                   <label>
                     <input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php echo $option_value['product_option_value_id']; ?>" />
+                    <?php if ($option_value['image']) { ?>
+                    <img src="<?php echo $option_value['image']; ?>" alt="<?php echo $option_value['name'] . ($option_value['price'] ? ' ' . $option_value['price_prefix'] . $option_value['price'] : ''); ?>" class="img-thumbnail" /> 
+                    <?php } ?>                    
                     <?php echo $option_value['name']; ?>
                     <?php if ($option_value['price']) { ?>
                     (<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
@@ -220,25 +211,10 @@
                 <div class="checkbox">
                   <label>
                     <input type="checkbox" name="option[<?php echo $option['product_option_id']; ?>][]" value="<?php echo $option_value['product_option_value_id']; ?>" />
-                    <?php echo $option_value['name']; ?>
-                    <?php if ($option_value['price']) { ?>
-                    (<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
+                    <?php if ($option_value['image']) { ?>
+                    <img src="<?php echo $option_value['image']; ?>" alt="<?php echo $option_value['name'] . ($option_value['price'] ? ' ' . $option_value['price_prefix'] . $option_value['price'] : ''); ?>" class="img-thumbnail" /> 
                     <?php } ?>
-                  </label>
-                </div>
-                <?php } ?>
-              </div>
-            </div>
-            <?php } ?>
-            <?php if ($option['type'] == 'image') { ?>
-            <div class="form-group<?php echo ($option['required'] ? ' required' : ''); ?>">
-              <label class="control-label"><?php echo $option['name']; ?></label>
-              <div id="input-option<?php echo $option['product_option_id']; ?>">
-                <?php foreach ($option['product_option_value'] as $option_value) { ?>
-                <div class="radio">
-                  <label>
-                    <input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php echo $option_value['product_option_value_id']; ?>" />
-                    <img src="<?php echo $option_value['image']; ?>" alt="<?php echo $option_value['name'] . ($option_value['price'] ? ' ' . $option_value['price_prefix'] . $option_value['price'] : ''); ?>" class="img-thumbnail" /> <?php echo $option_value['name']; ?>
+                    <?php echo $option_value['name']; ?>
                     <?php if ($option_value['price']) { ?>
                     (<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
                     <?php } ?>
@@ -301,12 +277,12 @@
             <?php } ?>
             <?php if ($recurrings) { ?>
             <hr>
-            <h3><?php echo $text_payment_recurring ?></h3>
+            <h3><?php echo $text_payment_recurring; ?></h3>
             <div class="form-group required">
               <select name="recurring_id" class="form-control">
                 <option value=""><?php echo $text_select; ?></option>
                 <?php foreach ($recurrings as $recurring) { ?>
-                <option value="<?php echo $recurring['recurring_id'] ?>"><?php echo $recurring['name'] ?></option>
+                <option value="<?php echo $recurring['recurring_id']; ?>"><?php echo $recurring['name']; ?></option>
                 <?php } ?>
               </select>
               <div class="help-block" id="recurring-description"></div>
@@ -336,9 +312,9 @@
               <a href="" onclick="$('a[href=\'#tab-review\']').trigger('click'); return false;"><?php echo $reviews; ?></a> / <a href="" onclick="$('a[href=\'#tab-review\']').trigger('click'); return false;"><?php echo $text_write; ?></a></p>
             <hr>
             <!-- AddThis Button BEGIN -->
-            <div class="addthis_toolbox addthis_default_style"><a class="addthis_button_facebook_like" fb:like:layout="button_count"></a> <a class="addthis_button_tweet"></a> <a class="addthis_button_pinterest_pinit"></a> <a class="addthis_counter addthis_pill_style"></a></div>
-            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-515eeaf54693130e"></script> 
-            <!-- AddThis Button END --> 
+            <div class="addthis_toolbox addthis_default_style" data-url="<?php echo $share; ?>"><a class="addthis_button_facebook_like" fb:like:layout="button_count"></a> <a class="addthis_button_tweet"></a> <a class="addthis_button_pinterest_pinit"></a> <a class="addthis_counter addthis_pill_style"></a></div>
+            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-515eeaf54693130e"></script>
+            <!-- AddThis Button END -->
           </div>
           <?php } ?>
         </div>
@@ -349,11 +325,11 @@
         <?php $i = 0; ?>
         <?php foreach ($products as $product) { ?>
         <?php if ($column_left && $column_right) { ?>
-        <?php $class = 'col-lg-6 col-md-6 col-sm-12 col-xs-12'; ?>
+        <?php $class = 'col-xs-8 col-sm-6'; ?>
         <?php } elseif ($column_left || $column_right) { ?>
-        <?php $class = 'col-lg-4 col-md-4 col-sm-6 col-xs-12'; ?>
+        <?php $class = 'col-xs-6 col-md-4'; ?>
         <?php } else { ?>
-        <?php $class = 'col-lg-3 col-md-3 col-sm-6 col-xs-12'; ?>
+        <?php $class = 'col-xs-6 col-sm-3'; ?>
         <?php } ?>
         <div class="<?php echo $class; ?>">
           <div class="product-thumb transition">
@@ -363,8 +339,8 @@
               <p><?php echo $product['description']; ?></p>
               <?php if ($product['rating']) { ?>
               <div class="rating">
-                <?php for ($i = 1; $i <= 5; $i++) { ?>
-                <?php if ($product['rating'] < $i) { ?>
+                <?php for ($j = 1; $j <= 5; $j++) { ?>
+                <?php if ($product['rating'] < $j) { ?>
                 <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
                 <?php } else { ?>
                 <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
@@ -386,17 +362,17 @@
               <?php } ?>
             </div>
             <div class="button-group">
-              <button type="button" onclick="cart.add('<?php echo $product['product_id']; ?>');"><span class="hidden-xs hidden-sm hidden-md"><?php echo $button_cart; ?></span> <i class="fa fa-shopping-cart"></i></button>
+              <button type="button" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');"><span class="hidden-xs hidden-sm hidden-md"><?php echo $button_cart; ?></span> <i class="fa fa-shopping-cart"></i></button>
               <button type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-heart"></i></button>
               <button type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-exchange"></i></button>
             </div>
           </div>
         </div>
-        <?php if (($column_left && $column_right) && ($i % 2 == 0)) { ?>
+        <?php if (($column_left && $column_right) && (($i+1) % 2 == 0)) { ?>
         <div class="clearfix visible-md visible-sm"></div>
-        <?php } elseif (($column_left || $column_right) && ($i % 3 == 0)) { ?>
+        <?php } elseif (($column_left || $column_right) && (($i+1) % 3 == 0)) { ?>
         <div class="clearfix visible-md"></div>
-        <?php } elseif ($i % 4 == 0) { ?>
+        <?php } elseif (($i+1) % 4 == 0) { ?>
         <div class="clearfix visible-md"></div>
         <?php } ?>
         <?php $i++; ?>
@@ -429,14 +405,14 @@ $('select[name=\'recurring_id\'], input[name="quantity"]').change(function(){
 		},
 		success: function(json) {
 			$('.alert, .text-danger').remove();
-			
+
 			if (json['success']) {
 				$('#recurring-description').html(json['success']);
 			}
 		}
 	});
 });
-//--></script> 
+//--></script>
 <script type="text/javascript"><!--
 $('#button-cart').on('click', function() {
 	$.ajax({
@@ -458,7 +434,7 @@ $('#button-cart').on('click', function() {
 				if (json['error']['option']) {
 					for (i in json['error']['option']) {
 						var element = $('#input-option' + i.replace('_', '-'));
-						
+
 						if (element.parent().hasClass('input-group')) {
 							element.parent().after('<div class="text-danger">' + json['error']['option'][i] + '</div>');
 						} else {
@@ -466,28 +442,31 @@ $('#button-cart').on('click', function() {
 						}
 					}
 				}
-				
+
 				if (json['error']['recurring']) {
 					$('select[name=\'recurring_id\']').after('<div class="text-danger">' + json['error']['recurring'] + '</div>');
 				}
-				
+
 				// Highlight any found errors
 				$('.text-danger').parent().addClass('has-error');
 			}
-			
+
 			if (json['success']) {
 				$('.breadcrumb').after('<div class="alert alert-success">' + json['success'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
-				
-				$('#cart-total').html(json['total']);
-				
+
+				$('#cart > button').html('<span id="cart-total"><i class="fa fa-shopping-cart"></i> ' + json['total'] + '</span>');
+
 				$('html, body').animate({ scrollTop: 0 }, 'slow');
-				
+
 				$('#cart > ul').load('index.php?route=common/cart/info ul li');
 			}
-		}
+		},
+        error: function(xhr, ajaxOptions, thrownError) {
+            alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+        }
 	});
 });
-//--></script> 
+//--></script>
 <script type="text/javascript"><!--
 $('.date').datetimepicker({
 	pickTime: false
@@ -504,17 +483,21 @@ $('.time').datetimepicker({
 
 $('button[id^=\'button-upload\']').on('click', function() {
 	var node = this;
-	
+
 	$('#form-upload').remove();
-	
+
 	$('body').prepend('<form enctype="multipart/form-data" id="form-upload" style="display: none;"><input type="file" name="file" /></form>');
-	
+
 	$('#form-upload input[name=\'file\']').trigger('click');
-	
+
+	if (typeof timer != 'undefined') {
+    	clearInterval(timer);
+	}
+
 	timer = setInterval(function() {
 		if ($('#form-upload input[name=\'file\']').val() != '') {
 			clearInterval(timer);
-			
+
 			$.ajax({
 				url: 'index.php?route=tool/upload',
 				type: 'post',
@@ -531,15 +514,15 @@ $('button[id^=\'button-upload\']').on('click', function() {
 				},
 				success: function(json) {
 					$('.text-danger').remove();
-					
+
 					if (json['error']) {
 						$(node).parent().find('input').after('<div class="text-danger">' + json['error'] + '</div>');
 					}
-					
+
 					if (json['success']) {
 						alert(json['success']);
-						
-						$(node).parent().find('input').attr('value', json['code']);
+
+						$(node).parent().find('input').val(json['code']);
 					}
 				},
 				error: function(xhr, ajaxOptions, thrownError) {
@@ -549,10 +532,10 @@ $('button[id^=\'button-upload\']').on('click', function() {
 		}
 	}, 500);
 });
-//--></script> 
+//--></script>
 <script type="text/javascript"><!--
 $('#review').delegate('.pagination a', 'click', function(e) {
-  e.preventDefault();
+    e.preventDefault();
 
     $('#review').fadeOut('slow');
 
@@ -568,29 +551,26 @@ $('#button-review').on('click', function() {
 		url: 'index.php?route=product/product/write&product_id=<?php echo $product_id; ?>',
 		type: 'post',
 		dataType: 'json',
-		data: 'name=' + encodeURIComponent($('input[name=\'name\']').val()) + '&text=' + encodeURIComponent($('textarea[name=\'text\']').val()) + '&rating=' + encodeURIComponent($('input[name=\'rating\']:checked').val() ? $('input[name=\'rating\']:checked').val() : '') + '&captcha=' + encodeURIComponent($('input[name=\'captcha\']').val()),
+		data: $("#form-review").serialize(),
 		beforeSend: function() {
 			$('#button-review').button('loading');
 		},
 		complete: function() {
 			$('#button-review').button('reset');
-			$('#captcha').attr('src', 'index.php?route=tool/captcha#'+new Date().getTime());
-			$('input[name=\'captcha\']').val('');
 		},
 		success: function(json) {
 			$('.alert-success, .alert-danger').remove();
-			
+
 			if (json['error']) {
 				$('#review').after('<div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> ' + json['error'] + '</div>');
 			}
-			
+
 			if (json['success']) {
 				$('#review').after('<div class="alert alert-success"><i class="fa fa-check-circle"></i> ' + json['success'] + '</div>');
-				
+
 				$('input[name=\'name\']').val('');
 				$('textarea[name=\'text\']').val('');
 				$('input[name=\'rating\']:checked').prop('checked', false);
-				$('input[name=\'captcha\']').val('');
 			}
 		}
 	});
@@ -605,5 +585,5 @@ $(document).ready(function() {
 		}
 	});
 });
-//--></script> 
+//--></script>
 <?php echo $footer; ?>
