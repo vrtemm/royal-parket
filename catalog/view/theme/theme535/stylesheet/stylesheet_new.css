@@ -314,7 +314,7 @@ label {
     opacity: 1;
 }
 a, button {
-	outline: none !import;
+	outline: none !important;
 }
 .text-danger {
     color: white;
@@ -5880,6 +5880,16 @@ header .col-sm-3 {
     margin-bottom: 0px;
     display: block;
 }
+@media (min-width: 768px) {
+   header .phones-block-column:first-child > label{
+        margin-bottom: 8px;
+    }  
+}
+@media (min-width: 768px) {
+    footer .phones-block-column:first-child > label{
+         margin-bottom: 12px;
+     }  
+ }
 .phones-block-column-address-span.phones-block-column-address-span--extra-padding-bottom {
     display: inline-block;
     padding-bottom: 6px;
